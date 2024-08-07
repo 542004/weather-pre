@@ -3,6 +3,7 @@
     "pages/Index",
     "pages/CityMangerPage",
     "pages/AqiPage",
-    "pages/WarningDetailPage"
+    "pages/WarningDetailPage",
+    "pages/DailyDetailPage"
   ]
 }

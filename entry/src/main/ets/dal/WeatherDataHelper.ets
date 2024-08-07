@@ -28,28 +28,24 @@ class WeatherDataHelper{
   }
 
   // DailyDetailViewModel 返回15天
-  public getDailyDetail(model:DailyWeatherResult){
-    // return model.daily
-    // let ans:DailyItem[]=[]
-    // for(let i=0;i<model.length;i++){
-    //   let item=model[i]
-    //   ans.push(new DailyDetailViewModel(item.date,
-    //     item.code_day,
-    //     item.code_night,
-    //     item.high,
-    //     item.low,
-    //     item.wind_scale,
-    //     item.humidity))
-    //   // ans.push(new DailyDetailViewModel(model.daily[i].date,
-    //   //   model.daily[i].code_day,
-    //   //   model.daily[i].code_night,
-    //   //   model.daily[i].high,
-    //   //   model.daily[i].low,
-    //   //   model.daily[i].wind_scale,
-    //   //   model.daily[i].humidity))
-    // }
-    // return ans
+  public getDailyDetail(model:DailyWeatherResult):DailyDetailViewModel[]{
+    let ans:DailyDetailViewModel[]=[]
+    for(let i=0;i<model.daily.length;i++){
+      let item=model.daily[i]
+      ans.push(new DailyDetailViewModel(
+        item.text_day,
+        item.text_night,
+        item.date,
+        item.code_day,
+        item.code_night,
+        item.high,
+        item.low,
+        item.wind_scale,
+        item.humidity))
+    }
+    return ans;
   }
+
 
   //DailyViewModel 返回3天
   public getDaily(model:DailyWeatherResult):DailyViewModel[]{

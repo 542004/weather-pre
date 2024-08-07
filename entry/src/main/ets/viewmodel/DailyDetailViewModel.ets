@@ -7,7 +7,9 @@ export class DailyDetailViewModel{
   public tempLow:string
   public windSpeed:string
   public quality:string
-  constructor(week:string='',dayImg:string='',nightImg:string='',tempHigh:string='',tempLow:string='',windSpeed:string='',quality:string='') {
+  public text_day:string
+  public text_night:string
+  constructor(text_day:string='',text_night:string='',week:string='',dayImg:string='',nightImg:string='',tempHigh:string='',tempLow:string='',windSpeed:string='',quality:string='') {
     this.week=week
     this.dayImg=dayImg
     this.nightImg=nightImg
@@ -15,9 +17,11 @@ export class DailyDetailViewModel{
     this.tempLow=tempLow
     this.windSpeed=windSpeed
     this.quality=quality
+    this.text_day=text_day
+    this.text_night=text_night
   }
 }
- // @Observed
-export class DailyDetailViewModelArray{
-  public dailyDetailViewModelArray:DailyDetailViewModel[]=[]
-}
+//  // @Observed
+// export class DailyDetailViewModelArray{
+//   public dailyDetailViewModelArray:DailyDetailViewModel[]=[]
+// }

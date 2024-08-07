@@ -39,18 +39,21 @@ export struct WarningAreaComponent{
             Column(){
               Row(){
                 Text(item.title)
+                  .fontColor(Color.White)
                   .fontSize($r('app.float.common_font_size'))
                   .fontWeight(FontWeight.Bold)
               }
               .layoutWeight(2)
               Row(){
                 Text(item.pub_date)
+                  .fontColor(Color.White)
                   .fontSize($r('app.float.common_font_size'))
                   .fontWeight(FontWeight.Regular)
               }
               .layoutWeight(1)
               Row(){
                 Text(item.description)
+                  .fontColor(Color.White)
                   .fontSize($r('app.float.common_font_size'))
                   .fontWeight(FontWeight.Normal)
                   .maxLines(2)
@@ -66,7 +69,7 @@ export struct WarningAreaComponent{
         }
         .loop(false)
       }
-      .opacity(0.65)
+      // .opacity(1)
       .backgroundColor('#C0C0C0')
       .height('100%')
       .width('100%')

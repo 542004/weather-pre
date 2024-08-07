@@ -87,8 +87,7 @@ struct Index {
           //每天信息
           Row(){
             DailyAreaComponent({city:city})
-              .backgroundColor(Color.Orange)
-          }.height('20%').backgroundColor(Color.Gray)
+          }.height('20%')
 
           //每小时信息
           Row(){
@@ -100,7 +99,7 @@ struct Index {
         // .backgroundColor('#33cccc')
       })
     }
-    .backgroundColor('#B0E0E6')
+    // .backgroundColor('#B0E0E6')
     .height('100%')
     .width('100%')
     .loop(false)
