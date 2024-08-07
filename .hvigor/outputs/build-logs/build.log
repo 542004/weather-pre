@@ -1,0 +1,553 @@
+[2024-08-07T09:31:56.446] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2024-08-07T09:31:56.518] [DEBUG] debug-file - env: daemon=true
+[2024-08-07T09:31:56.448] [DEBUG] debug-file - env: hvigor-config.json5 content = {
+  modelVersion: '5.0.0',
+  dependencies: {},
+  execution: {},
+  logging: {},
+  debugging: {},
+  nodeOptions: {}
+}
+[2024-08-07T09:31:57.290] [DEBUG] debug-file - java daemon tryConnect failed Error: connect ECONNREFUSED ::1:45050
+[2024-08-07T09:31:57.298] [DEBUG] debug-file - java daemon started at port 45050 pid 4000
+[2024-08-07T09:31:57.308] [DEBUG] debug-file - hvigor start cli arguments:{
+  prop: [
+    'module=entry@default',
+    'product=default',
+    'requiredDeviceType=phone'
+  ],
+  mode: 'module',
+  parallel: true,
+  incremental: true,
+  daemon: true,
+  _: [ 'assembleHap', '--analyze=normal' ]
+}
+[2024-08-07T09:31:57.334] [DEBUG] debug-file - session manager: set active socket. socketId=0wlObWdqRrv3WO4SAAAB
+[2024-08-07T09:31:58.190] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: true,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' }
+}
+[2024-08-07T09:31:58.198] [DEBUG] debug-file - Cache service initialization finished in 9 ms 
+[2024-08-07T09:31:58.211] [DEBUG] debug-file - hvigorfile, resolving D:\HLQ\Documents\HarmonyProject\MyWeather\hvigorfile.ts
+[2024-08-07T09:32:00.781] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2024-08-07T09:32:00.781] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2024-08-07T09:32:00.954] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2024-08-07T09:32:00.954] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2024-08-07T09:32:00.955] [DEBUG] debug-file - Product 'default' build option: {}
+[2024-08-07T09:32:00.955] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2024-08-07T09:32:00.958] [DEBUG] debug-file - Product 'default' using build option: {
+  "debuggable": true
+} in this build.
+[2024-08-07T09:32:00.967] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2024-08-07T09:32:00.972] [DEBUG] debug-file - Local scan or download HarmonyOS sdk components toolchains,ets,js,native
+[2024-08-07T09:32:00.977] [DEBUG] debug-file - Local scan or download hmscore sdk components toolchains,ets,native
+[2024-08-07T09:32:00.986] [DEBUG] debug-file - Sdk init in 18 ms 
+[2024-08-07T09:32:01.012] [DEBUG] debug-file - Project task initialization takes 22 ms 
+[2024-08-07T09:32:01.012] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2024-08-07T09:32:01.012] [DEBUG] debug-file - hvigorfile, no custom plugins were found in D:\HLQ\Documents\HarmonyProject\MyWeather\hvigorfile.ts
+[2024-08-07T09:32:01.012] [DEBUG] debug-file - hvigorfile, resolve finished D:\HLQ\Documents\HarmonyProject\MyWeather\hvigorfile.ts
+[2024-08-07T09:32:01.018] [DEBUG] debug-file - hvigorfile, resolving D:\HLQ\Documents\HarmonyProject\MyWeather\entry\hvigorfile.ts
+[2024-08-07T09:32:01.024] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2024-08-07T09:32:01.024] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2024-08-07T09:32:01.037] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2024-08-07T09:32:01.038] [DEBUG] debug-file - Target 'default' config: {}
+[2024-08-07T09:32:01.038] [DEBUG] debug-file - Target 'ohosTest' config: {}
+[2024-08-07T09:32:01.038] [DEBUG] debug-file - Module 'entry' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default",
+  "name": "debug"
+}
+[2024-08-07T09:32:01.039] [DEBUG] debug-file - Module 'entry' target 'ohosTest' build option: {
+  "debuggable": true,
+  "name": "default"
+}
+[2024-08-07T09:32:01.039] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2024-08-07T09:32:01.039] [DEBUG] debug-file - Module 'entry' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default",
+  "name": "debug"
+} in this build.
+[2024-08-07T09:32:01.046] [DEBUG] debug-file - Module entry task initialization takes 5 ms 
+[2024-08-07T09:32:01.046] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2024-08-07T09:32:01.046] [DEBUG] debug-file - hvigorfile, no custom plugins were found in D:\HLQ\Documents\HarmonyProject\MyWeather\entry\hvigorfile.ts
+[2024-08-07T09:32:01.046] [DEBUG] debug-file - hvigorfile, resolve finished D:\HLQ\Documents\HarmonyProject\MyWeather\entry\hvigorfile.ts
+[2024-08-07T09:32:01.087] [DEBUG] debug-file - hvigorfile, resolve hvigorfile dependencies in 40 ms 
+[2024-08-07T09:32:01.087] [DEBUG] debug-file - project has submodules:entry
+[2024-08-07T09:32:01.088] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2024-08-07T09:32:01.096] [DEBUG] debug-file - load to the disk finished
+[2024-08-07T09:32:01.098] [DEBUG] debug-file - Module MyWeather Collected Dependency: 
+[2024-08-07T09:32:01.098] [DEBUG] debug-file - Module MyWeather's total dependency: 0
+[2024-08-07T09:32:01.101] [DEBUG] debug-file - Module entry Collected Dependency: 
+[2024-08-07T09:32:01.101] [DEBUG] debug-file - Module entry's total dependency: 0
+[2024-08-07T09:32:01.107] [DEBUG] debug-file - Configuration phase cost:2 s 903 ms 
+[2024-08-07T09:32:01.109] [DEBUG] debug-file - Configuration task cost before running: 2 s 932 ms 
+[2024-08-07T09:32:01.112] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.113] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.118] [DEBUG] debug-file - Executing task :entry:default@PreBuild
+[2024-08-07T09:32:01.130] [DEBUG] debug-file - Incremental task entry:default@PreBuild pre-execution cost: 9 ms .
+[2024-08-07T09:32:01.130] [DEBUG] debug-file - entry : default@PreBuild cost memory 0.43731689453125
+[2024-08-07T09:32:01.133] [INFO] debug-file - UP-TO-DATE :entry:default@PreBuild...  
+[2024-08-07T09:32:01.135] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.135] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.136] [DEBUG] debug-file - Executing task :entry:default@GenerateMetadata
+[2024-08-07T09:32:01.140] [DEBUG] debug-file - Incremental task entry:default@GenerateMetadata pre-execution cost: 3 ms .
+[2024-08-07T09:32:01.140] [DEBUG] debug-file - entry : default@GenerateMetadata cost memory 0.15373992919921875
+[2024-08-07T09:32:01.140] [INFO] debug-file - UP-TO-DATE :entry:default@GenerateMetadata...  
+[2024-08-07T09:32:01.142] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.143] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.143] [DEBUG] debug-file - Executing task :entry:default@ConfigureCmake
+[2024-08-07T09:32:01.143] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2024-08-07T09:32:01.144] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2024-08-07T09:32:01.149] [DEBUG] debug-file - entry : default@ConfigureCmake cost memory 0.40606689453125
+[2024-08-07T09:32:01.150] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 973 ms 
+[2024-08-07T09:32:01.150] [INFO] debug-file - Finished :entry:default@ConfigureCmake... after 7 ms 
+[2024-08-07T09:32:01.153] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.153] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.154] [DEBUG] debug-file - Executing task :entry:default@MergeProfile
+[2024-08-07T09:32:01.158] [DEBUG] debug-file - Incremental task entry:default@MergeProfile pre-execution cost: 3 ms .
+[2024-08-07T09:32:01.158] [DEBUG] debug-file - entry : default@MergeProfile cost memory 0.105438232421875
+[2024-08-07T09:32:01.158] [INFO] debug-file - UP-TO-DATE :entry:default@MergeProfile...  
+[2024-08-07T09:32:01.161] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.161] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.163] [DEBUG] debug-file - Executing task :entry:default@CreateBuildProfile
+[2024-08-07T09:32:01.167] [DEBUG] debug-file - Incremental task entry:default@CreateBuildProfile pre-execution cost: 3 ms .
+[2024-08-07T09:32:01.167] [DEBUG] debug-file - entry : default@CreateBuildProfile cost memory 0.13067626953125
+[2024-08-07T09:32:01.168] [INFO] debug-file - UP-TO-DATE :entry:default@CreateBuildProfile...  
+[2024-08-07T09:32:01.171] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.171] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.172] [DEBUG] debug-file - Executing task :entry:default@PreCheckSyscap
+[2024-08-07T09:32:01.173] [DEBUG] debug-file - entry : default@PreCheckSyscap cost memory 0.0134429931640625
+[2024-08-07T09:32:01.173] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 996 ms 
+[2024-08-07T09:32:01.173] [INFO] debug-file - Finished :entry:default@PreCheckSyscap... after 1 ms 
+[2024-08-07T09:32:01.178] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.178] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.205] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgContextInfo
+[2024-08-07T09:32:01.206] [DEBUG] debug-file - entry : default@GeneratePkgContextInfo cost memory 0.02176666259765625
+[2024-08-07T09:32:01.206] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 29 ms 
+[2024-08-07T09:32:01.206] [INFO] debug-file - Finished :entry:default@GeneratePkgContextInfo... after 1 ms 
+[2024-08-07T09:32:01.210] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.210] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.213] [DEBUG] debug-file - Executing task :entry:default@ProcessIntegratedHsp
+[2024-08-07T09:32:01.216] [DEBUG] debug-file - entry:default@ProcessIntegratedHsp is not up-to-date, since the output file 'D:\HLQ\Documents\HarmonyProject\MyWeather\build\cache\default\integrated_hsp\integratedHspCache.json' does not exist.
+[2024-08-07T09:32:01.216] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp pre-execution cost: 2 ms .
+[2024-08-07T09:32:01.217] [DEBUG] debug-file - entry : default@ProcessIntegratedHsp cost memory 0.100433349609375
+[2024-08-07T09:32:01.217] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 40 ms 
+[2024-08-07T09:32:01.218] [INFO] debug-file - Finished :entry:default@ProcessIntegratedHsp... after 4 ms 
+[2024-08-07T09:32:01.222] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.223] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.224] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithCmake
+[2024-08-07T09:32:01.224] [DEBUG] debug-file - entry : default@BuildNativeWithCmake cost memory 0.014373779296875
+[2024-08-07T09:32:01.225] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 48 ms 
+[2024-08-07T09:32:01.225] [INFO] debug-file - Finished :entry:default@BuildNativeWithCmake... after 1 ms 
+[2024-08-07T09:32:01.229] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.229] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.230] [DEBUG] debug-file - Executing task :entry:default@MakePackInfo
+[2024-08-07T09:32:01.236] [DEBUG] debug-file - Incremental task entry:default@MakePackInfo pre-execution cost: 4 ms .
+[2024-08-07T09:32:01.236] [DEBUG] debug-file - entry : default@MakePackInfo cost memory 0.16954803466796875
+[2024-08-07T09:32:01.237] [INFO] debug-file - UP-TO-DATE :entry:default@MakePackInfo...  
+[2024-08-07T09:32:01.240] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.240] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.243] [DEBUG] debug-file - Executing task :entry:default@ProcessProfile
+[2024-08-07T09:32:01.244] [DEBUG] debug-file - Incremental task entry:default@ProcessProfile pre-execution cost: 2 ms .
+[2024-08-07T09:32:01.244] [DEBUG] debug-file - entry : default@ProcessProfile cost memory 0.062255859375
+[2024-08-07T09:32:01.245] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessProfile...  
+[2024-08-07T09:32:01.248] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.248] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.250] [DEBUG] debug-file - Executing task :entry:default@SyscapTransform
+[2024-08-07T09:32:01.268] [DEBUG] debug-file - entry:default@SyscapTransform is not up-to-date, since the output file 'D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\syscap\default\rpcid.sc' does not exist.
+[2024-08-07T09:32:01.268] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform pre-execution cost: 17 ms .
+[2024-08-07T09:32:01.268] [DEBUG] debug-file - entry : default@SyscapTransform cost memory 0.12436676025390625
+[2024-08-07T09:32:01.269] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 92 ms 
+[2024-08-07T09:32:01.270] [INFO] debug-file - Finished :entry:default@SyscapTransform... after 19 ms 
+[2024-08-07T09:32:01.272] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.272] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.275] [DEBUG] debug-file - Executing task :entry:default@ProcessRouterMap
+[2024-08-07T09:32:01.281] [DEBUG] debug-file - Incremental task entry:default@ProcessRouterMap pre-execution cost: 5 ms .
+[2024-08-07T09:32:01.281] [DEBUG] debug-file - entry : default@ProcessRouterMap cost memory 0.7705535888671875
+[2024-08-07T09:32:01.283] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessRouterMap...  
+[2024-08-07T09:32:01.285] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.285] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.286] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithNinja
+[2024-08-07T09:32:01.287] [DEBUG] debug-file - entry : default@BuildNativeWithNinja cost memory 0.13144683837890625
+[2024-08-07T09:32:01.287] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 110 ms 
+[2024-08-07T09:32:01.287] [INFO] debug-file - Finished :entry:default@BuildNativeWithNinja... after 2 ms 
+[2024-08-07T09:32:01.289] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.289] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.291] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@ProcessResource
+[2024-08-07T09:32:01.294] [DEBUG] debug-file - Executing task :entry:default@ProcessResource
+[2024-08-07T09:32:01.295] [DEBUG] debug-file - Incremental task entry:default@ProcessResource pre-execution cost: 1 ms .
+[2024-08-07T09:32:01.295] [DEBUG] debug-file - entry : default@ProcessResource cost memory 0.11342620849609375
+[2024-08-07T09:32:01.300] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessResource...  
+[2024-08-07T09:32:01.304] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.304] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.309] [DEBUG] debug-file - Executing task :entry:default@GenerateLoaderJson
+[2024-08-07T09:32:01.324] [DEBUG] debug-file - Incremental task entry:default@GenerateLoaderJson pre-execution cost: 9 ms .
+[2024-08-07T09:32:01.324] [DEBUG] debug-file - entry : default@GenerateLoaderJson cost memory 0.5280685424804688
+[2024-08-07T09:32:01.329] [INFO] debug-file - UP-TO-DATE :entry:default@GenerateLoaderJson...  
+[2024-08-07T09:32:01.331] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.331] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.334] [DEBUG] debug-file - Executing task :entry:default@ProcessLibs
+[2024-08-07T09:32:01.336] [DEBUG] debug-file - Incremental task entry:default@ProcessLibs pre-execution cost: 2 ms .
+[2024-08-07T09:32:01.336] [DEBUG] debug-file - entry : default@ProcessLibs cost memory 0.07993316650390625
+[2024-08-07T09:32:01.337] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessLibs...  
+[2024-08-07T09:32:01.339] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.339] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.340] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@CompileResource
+[2024-08-07T09:32:01.343] [DEBUG] debug-file - Executing task :entry:default@CompileResource
+[2024-08-07T09:32:01.364] [DEBUG] debug-file - Incremental task entry:default@CompileResource pre-execution cost: 18 ms .
+[2024-08-07T09:32:01.364] [DEBUG] debug-file - entry : default@CompileResource cost memory 0.8049850463867188
+[2024-08-07T09:32:01.366] [INFO] debug-file - UP-TO-DATE :entry:default@CompileResource...  
+[2024-08-07T09:32:01.369] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.369] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.372] [DEBUG] debug-file - Executing task :entry:default@DoNativeStrip
+[2024-08-07T09:32:01.374] [DEBUG] debug-file - Incremental task entry:default@DoNativeStrip pre-execution cost: 2 ms .
+[2024-08-07T09:32:01.374] [DEBUG] debug-file - entry : default@DoNativeStrip cost memory 0.06531524658203125
+[2024-08-07T09:32:01.374] [INFO] debug-file - UP-TO-DATE :entry:default@DoNativeStrip...  
+[2024-08-07T09:32:01.378] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.378] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.383] [DEBUG] debug-file - Executing task :entry:default@CompileArkTS
+[2024-08-07T09:32:01.410] [DEBUG] debug-file - Incremental task entry:default@CompileArkTS pre-execution cost: 20 ms .
+[2024-08-07T09:32:01.410] [DEBUG] debug-file - entry : default@CompileArkTS cost memory 1.04840087890625
+[2024-08-07T09:32:01.414] [INFO] debug-file - UP-TO-DATE :entry:default@CompileArkTS...  
+[2024-08-07T09:32:01.416] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.416] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.423] [DEBUG] debug-file - Executing task :entry:default@BuildJS
+[2024-08-07T09:32:01.428] [DEBUG] debug-file - entry : default@BuildJS cost memory 0.138671875
+[2024-08-07T09:32:01.428] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 251 ms 
+[2024-08-07T09:32:01.428] [INFO] debug-file - Finished :entry:default@BuildJS... after 6 ms 
+[2024-08-07T09:32:01.431] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.431] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.434] [DEBUG] debug-file - Executing task :entry:default@CacheNativeLibs
+[2024-08-07T09:32:01.437] [DEBUG] debug-file - Incremental task entry:default@CacheNativeLibs pre-execution cost: 3 ms .
+[2024-08-07T09:32:01.438] [DEBUG] debug-file - entry : default@CacheNativeLibs cost memory 0.0827789306640625
+[2024-08-07T09:32:01.438] [INFO] debug-file - UP-TO-DATE :entry:default@CacheNativeLibs...  
+[2024-08-07T09:32:01.441] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.441] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.442] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgModuleJson
+[2024-08-07T09:32:01.447] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgModuleJson pre-execution cost: 2 ms .
+[2024-08-07T09:32:01.447] [DEBUG] debug-file - entry : default@GeneratePkgModuleJson cost memory 0.0948028564453125
+[2024-08-07T09:32:01.448] [INFO] debug-file - UP-TO-DATE :entry:default@GeneratePkgModuleJson...  
+[2024-08-07T09:32:01.455] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.455] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.463] [DEBUG] debug-file - Executing task :entry:default@PackageHap
+[2024-08-07T09:32:01.475] [DEBUG] debug-file - Incremental task entry:default@PackageHap pre-execution cost: 11 ms .
+[2024-08-07T09:32:01.476] [DEBUG] debug-file - entry : default@PackageHap cost memory 0.5007705688476562
+[2024-08-07T09:32:01.477] [INFO] debug-file - UP-TO-DATE :entry:default@PackageHap...  
+[2024-08-07T09:32:01.479] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:01.479] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:01.482] [DEBUG] debug-file - Executing task :entry:default@SignHap
+[2024-08-07T09:32:01.483] [WARN] debug-file - Will skip sign 'hos_hap'. No signingConfigs profile is configured in current project.
+             If needed, configure the signingConfigs in D:\HLQ\Documents\HarmonyProject\MyWeather\build-profile.json5.
+[2024-08-07T09:32:01.483] [DEBUG] debug-file - entry:default@SignHap is not up-to-date, since the output file 'D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\outputs\default\entry-default-signed.hap' does not exist.
+[2024-08-07T09:32:01.483] [DEBUG] debug-file - Incremental task entry:default@SignHap pre-execution cost: 1 ms .
+[2024-08-07T09:32:01.484] [DEBUG] debug-file - entry : default@SignHap cost memory 0.13434600830078125
+[2024-08-07T09:32:01.484] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 308 ms 
+[2024-08-07T09:32:01.485] [INFO] debug-file - Finished :entry:default@SignHap... after 3 ms 
+[2024-08-07T09:32:01.487] [DEBUG] debug-file - Executing task :entry:assembleHap
+[2024-08-07T09:32:01.487] [DEBUG] debug-file - entry : assembleHap cost memory 0.01149749755859375
+[2024-08-07T09:32:01.487] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 310 ms 
+[2024-08-07T09:32:01.487] [INFO] debug-file - Finished :entry:assembleHap... after 1 ms 
+[2024-08-07T09:32:01.497] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@PreBuild is up-to-date.
+[2024-08-07T09:32:01.497] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GenerateMetadata is up-to-date.
+[2024-08-07T09:32:01.497] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@MergeProfile is up-to-date.
+[2024-08-07T09:32:01.497] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CreateBuildProfile is up-to-date.
+[2024-08-07T09:32:01.497] [DEBUG] debug-file - Update task entry:default@GeneratePkgContextInfo output file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\loader\default\pkgContextInfo.json cache.
+[2024-08-07T09:32:01.498] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgContextInfo post-execution cost:1 ms .
+[2024-08-07T09:32:01.499] [DEBUG] debug-file - Update task entry:default@ProcessIntegratedHsp output file:D:\HLQ\Documents\HarmonyProject\MyWeather\build\cache\default\integrated_hsp\integratedHspCache.json cache.
+[2024-08-07T09:32:01.499] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp post-execution cost:1 ms .
+[2024-08-07T09:32:01.499] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@MakePackInfo is up-to-date.
+[2024-08-07T09:32:01.499] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessProfile is up-to-date.
+[2024-08-07T09:32:01.500] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:E:\DevEco5.0.3\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\openharmony\toolchains\syscap_tool.exe cache by regenerate.
+[2024-08-07T09:32:01.500] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:E:\DevEco5.0.3\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\openharmony\ets\api\device-define cache by regenerate.
+[2024-08-07T09:32:01.501] [DEBUG] debug-file - Update task entry:default@SyscapTransform output file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\syscap\default\rpcid.sc cache.
+[2024-08-07T09:32:01.502] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform post-execution cost:3 ms .
+[2024-08-07T09:32:01.502] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessRouterMap is up-to-date.
+[2024-08-07T09:32:01.502] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessResource is up-to-date.
+[2024-08-07T09:32:01.502] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GenerateLoaderJson is up-to-date.
+[2024-08-07T09:32:01.502] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessLibs is up-to-date.
+[2024-08-07T09:32:01.502] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CompileResource is up-to-date.
+[2024-08-07T09:32:01.502] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@DoNativeStrip is up-to-date.
+[2024-08-07T09:32:01.502] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CompileArkTS is up-to-date.
+[2024-08-07T09:32:01.503] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\loader\default cache by regenerate.
+[2024-08-07T09:32:01.504] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\res\default\resources\rawfile cache by regenerate.
+[2024-08-07T09:32:01.504] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2024-08-07T09:32:01.504] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\res\default\module.json cache by regenerate.
+[2024-08-07T09:32:01.505] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2024-08-07T09:32:01.505] [DEBUG] debug-file - Update task entry:default@BuildJS output file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\loader_out\default\js cache.
+[2024-08-07T09:32:01.506] [DEBUG] debug-file - Incremental task entry:default@BuildJS post-execution cost:4 ms .
+[2024-08-07T09:32:01.506] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CacheNativeLibs is up-to-date.
+[2024-08-07T09:32:01.506] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GeneratePkgModuleJson is up-to-date.
+[2024-08-07T09:32:01.506] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@PackageHap is up-to-date.
+[2024-08-07T09:32:01.506] [DEBUG] debug-file - Update task entry:default@SignHap input file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\outputs\default\entry-default-unsigned.hap cache by regenerate.
+[2024-08-07T09:32:01.506] [DEBUG] debug-file - Update task entry:default@SignHap output file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\outputs\default\entry-default-signed.hap cache.
+[2024-08-07T09:32:01.506] [DEBUG] debug-file - Incremental task entry:default@SignHap post-execution cost:1 ms .
+[2024-08-07T09:32:10.769] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: true,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' }
+}
+[2024-08-07T09:32:10.774] [DEBUG] debug-file - Cache service initialization finished in 5 ms 
+[2024-08-07T09:32:10.786] [DEBUG] debug-file - hvigorfile, resolving D:\HLQ\Documents\HarmonyProject\MyWeather\hvigorfile.ts
+[2024-08-07T09:32:10.792] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2024-08-07T09:32:10.792] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2024-08-07T09:32:10.800] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2024-08-07T09:32:10.800] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2024-08-07T09:32:10.800] [DEBUG] debug-file - Product 'default' build option: {}
+[2024-08-07T09:32:10.800] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2024-08-07T09:32:10.801] [DEBUG] debug-file - Product 'default' using build option: {
+  "debuggable": true
+} in this build.
+[2024-08-07T09:32:10.804] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2024-08-07T09:32:10.814] [DEBUG] debug-file - Sdk init in 10 ms 
+[2024-08-07T09:32:10.834] [DEBUG] debug-file - Project task initialization takes 19 ms 
+[2024-08-07T09:32:10.834] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2024-08-07T09:32:10.834] [DEBUG] debug-file - hvigorfile, no custom plugins were found in D:\HLQ\Documents\HarmonyProject\MyWeather\hvigorfile.ts
+[2024-08-07T09:32:10.834] [DEBUG] debug-file - hvigorfile, resolve finished D:\HLQ\Documents\HarmonyProject\MyWeather\hvigorfile.ts
+[2024-08-07T09:32:10.839] [DEBUG] debug-file - hvigorfile, resolving D:\HLQ\Documents\HarmonyProject\MyWeather\entry\hvigorfile.ts
+[2024-08-07T09:32:10.845] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2024-08-07T09:32:10.845] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2024-08-07T09:32:10.853] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2024-08-07T09:32:10.854] [DEBUG] debug-file - Target 'default' config: {}
+[2024-08-07T09:32:10.854] [DEBUG] debug-file - Target 'ohosTest' config: {}
+[2024-08-07T09:32:10.854] [DEBUG] debug-file - Module 'entry' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default",
+  "name": "debug"
+}
+[2024-08-07T09:32:10.854] [DEBUG] debug-file - Module 'entry' target 'ohosTest' build option: {
+  "debuggable": true,
+  "name": "default"
+}
+[2024-08-07T09:32:10.854] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2024-08-07T09:32:10.854] [DEBUG] debug-file - Module 'entry' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default",
+  "name": "debug"
+} in this build.
+[2024-08-07T09:32:10.857] [DEBUG] debug-file - Module entry task initialization takes 1 ms 
+[2024-08-07T09:32:10.857] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2024-08-07T09:32:10.857] [DEBUG] debug-file - hvigorfile, no custom plugins were found in D:\HLQ\Documents\HarmonyProject\MyWeather\entry\hvigorfile.ts
+[2024-08-07T09:32:10.857] [DEBUG] debug-file - hvigorfile, resolve finished D:\HLQ\Documents\HarmonyProject\MyWeather\entry\hvigorfile.ts
+[2024-08-07T09:32:10.898] [DEBUG] debug-file - hvigorfile, resolve hvigorfile dependencies in 40 ms 
+[2024-08-07T09:32:10.898] [DEBUG] debug-file - project has submodules:entry
+[2024-08-07T09:32:10.898] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2024-08-07T09:32:10.907] [DEBUG] debug-file - load to the disk finished
+[2024-08-07T09:32:10.909] [DEBUG] debug-file - Module MyWeather Collected Dependency: 
+[2024-08-07T09:32:10.909] [DEBUG] debug-file - Module MyWeather's total dependency: 0
+[2024-08-07T09:32:10.910] [DEBUG] debug-file - Module entry Collected Dependency: 
+[2024-08-07T09:32:10.910] [DEBUG] debug-file - Module entry's total dependency: 0
+[2024-08-07T09:32:10.913] [DEBUG] debug-file - Configuration phase cost:133 ms 
+[2024-08-07T09:32:10.914] [DEBUG] debug-file - Configuration task cost before running: 157 ms 
+[2024-08-07T09:32:10.916] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:10.916] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:10.920] [DEBUG] debug-file - Executing task :entry:default@PreBuild
+[2024-08-07T09:32:10.929] [DEBUG] debug-file - Incremental task entry:default@PreBuild pre-execution cost: 6 ms .
+[2024-08-07T09:32:10.929] [DEBUG] debug-file - entry : default@PreBuild cost memory 0.28464508056640625
+[2024-08-07T09:32:10.932] [INFO] debug-file - UP-TO-DATE :entry:default@PreBuild...  
+[2024-08-07T09:32:10.934] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:10.934] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:10.935] [DEBUG] debug-file - Executing task :entry:default@GenerateMetadata
+[2024-08-07T09:32:10.940] [DEBUG] debug-file - Incremental task entry:default@GenerateMetadata pre-execution cost: 3 ms .
+[2024-08-07T09:32:10.940] [DEBUG] debug-file - entry : default@GenerateMetadata cost memory 0.14403533935546875
+[2024-08-07T09:32:10.941] [INFO] debug-file - UP-TO-DATE :entry:default@GenerateMetadata...  
+[2024-08-07T09:32:10.943] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:10.943] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:10.944] [DEBUG] debug-file - Executing task :entry:default@ConfigureCmake
+[2024-08-07T09:32:10.944] [DEBUG] debug-file - entry : default@ConfigureCmake cost memory 0.0132293701171875
+[2024-08-07T09:32:10.944] [DEBUG] debug-file - runTaskFromQueue task cost before running: 187 ms 
+[2024-08-07T09:32:10.944] [INFO] debug-file - Finished :entry:default@ConfigureCmake... after 1 ms 
+[2024-08-07T09:32:10.947] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:10.947] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:10.948] [DEBUG] debug-file - Executing task :entry:default@MergeProfile
+[2024-08-07T09:32:10.950] [DEBUG] debug-file - Incremental task entry:default@MergeProfile pre-execution cost: 2 ms .
+[2024-08-07T09:32:10.950] [DEBUG] debug-file - entry : default@MergeProfile cost memory 0.09709930419921875
+[2024-08-07T09:32:10.950] [INFO] debug-file - UP-TO-DATE :entry:default@MergeProfile...  
+[2024-08-07T09:32:10.952] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:10.952] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:10.953] [DEBUG] debug-file - Executing task :entry:default@CreateBuildProfile
+[2024-08-07T09:32:10.956] [DEBUG] debug-file - Incremental task entry:default@CreateBuildProfile pre-execution cost: 2 ms .
+[2024-08-07T09:32:10.956] [DEBUG] debug-file - entry : default@CreateBuildProfile cost memory 0.12087249755859375
+[2024-08-07T09:32:10.957] [INFO] debug-file - UP-TO-DATE :entry:default@CreateBuildProfile...  
+[2024-08-07T09:32:10.959] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:10.959] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:10.959] [DEBUG] debug-file - Executing task :entry:default@PreCheckSyscap
+[2024-08-07T09:32:10.960] [DEBUG] debug-file - entry : default@PreCheckSyscap cost memory 0.0136566162109375
+[2024-08-07T09:32:10.960] [DEBUG] debug-file - runTaskFromQueue task cost before running: 203 ms 
+[2024-08-07T09:32:10.960] [INFO] debug-file - Finished :entry:default@PreCheckSyscap... after 1 ms 
+[2024-08-07T09:32:10.962] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:10.962] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:10.970] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgContextInfo
+[2024-08-07T09:32:10.970] [DEBUG] debug-file - entry : default@GeneratePkgContextInfo cost memory 0.021881103515625
+[2024-08-07T09:32:10.970] [DEBUG] debug-file - runTaskFromQueue task cost before running: 213 ms 
+[2024-08-07T09:32:10.970] [INFO] debug-file - Finished :entry:default@GeneratePkgContextInfo... after 1 ms 
+[2024-08-07T09:32:10.973] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:10.973] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:10.975] [DEBUG] debug-file - Executing task :entry:default@ProcessIntegratedHsp
+[2024-08-07T09:32:10.976] [DEBUG] debug-file - entry:default@ProcessIntegratedHsp is not up-to-date, since the output file 'D:\HLQ\Documents\HarmonyProject\MyWeather\build\cache\default\integrated_hsp\integratedHspCache.json' does not exist.
+[2024-08-07T09:32:10.976] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp pre-execution cost: 1 ms .
+[2024-08-07T09:32:10.976] [DEBUG] debug-file - entry : default@ProcessIntegratedHsp cost memory 0.0948028564453125
+[2024-08-07T09:32:10.976] [DEBUG] debug-file - runTaskFromQueue task cost before running: 219 ms 
+[2024-08-07T09:32:10.977] [INFO] debug-file - Finished :entry:default@ProcessIntegratedHsp... after 2 ms 
+[2024-08-07T09:32:10.980] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:10.980] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:10.981] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithCmake
+[2024-08-07T09:32:10.981] [DEBUG] debug-file - entry : default@BuildNativeWithCmake cost memory 0.0142974853515625
+[2024-08-07T09:32:10.981] [DEBUG] debug-file - runTaskFromQueue task cost before running: 224 ms 
+[2024-08-07T09:32:10.981] [INFO] debug-file - Finished :entry:default@BuildNativeWithCmake... after 1 ms 
+[2024-08-07T09:32:10.984] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:10.984] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:10.984] [DEBUG] debug-file - Executing task :entry:default@MakePackInfo
+[2024-08-07T09:32:10.988] [DEBUG] debug-file - Incremental task entry:default@MakePackInfo pre-execution cost: 3 ms .
+[2024-08-07T09:32:10.988] [DEBUG] debug-file - entry : default@MakePackInfo cost memory 0.15608978271484375
+[2024-08-07T09:32:10.989] [INFO] debug-file - UP-TO-DATE :entry:default@MakePackInfo...  
+[2024-08-07T09:32:10.990] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:10.991] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:10.992] [DEBUG] debug-file - Executing task :entry:default@ProcessProfile
+[2024-08-07T09:32:10.993] [DEBUG] debug-file - Incremental task entry:default@ProcessProfile pre-execution cost: 1 ms .
+[2024-08-07T09:32:10.993] [DEBUG] debug-file - entry : default@ProcessProfile cost memory 0.05936431884765625
+[2024-08-07T09:32:10.993] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessProfile...  
+[2024-08-07T09:32:10.995] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:10.995] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:10.997] [DEBUG] debug-file - Executing task :entry:default@SyscapTransform
+[2024-08-07T09:32:11.003] [DEBUG] debug-file - entry:default@SyscapTransform is not up-to-date, since the output file 'D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\syscap\default\rpcid.sc' does not exist.
+[2024-08-07T09:32:11.003] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform pre-execution cost: 5 ms .
+[2024-08-07T09:32:11.004] [DEBUG] debug-file - entry : default@SyscapTransform cost memory 0.11945343017578125
+[2024-08-07T09:32:11.004] [DEBUG] debug-file - runTaskFromQueue task cost before running: 247 ms 
+[2024-08-07T09:32:11.006] [INFO] debug-file - Finished :entry:default@SyscapTransform... after 7 ms 
+[2024-08-07T09:32:11.008] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:11.008] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:11.010] [DEBUG] debug-file - Executing task :entry:default@ProcessRouterMap
+[2024-08-07T09:32:11.020] [DEBUG] debug-file - Incremental task entry:default@ProcessRouterMap pre-execution cost: 8 ms .
+[2024-08-07T09:32:11.020] [DEBUG] debug-file - entry : default@ProcessRouterMap cost memory -8.853507995605469
+[2024-08-07T09:32:11.022] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessRouterMap...  
+[2024-08-07T09:32:11.024] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:11.024] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:11.025] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithNinja
+[2024-08-07T09:32:11.026] [DEBUG] debug-file - entry : default@BuildNativeWithNinja cost memory 0.03325653076171875
+[2024-08-07T09:32:11.026] [DEBUG] debug-file - runTaskFromQueue task cost before running: 269 ms 
+[2024-08-07T09:32:11.027] [INFO] debug-file - Finished :entry:default@BuildNativeWithNinja... after 2 ms 
+[2024-08-07T09:32:11.030] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:11.030] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:11.031] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@ProcessResource
+[2024-08-07T09:32:11.034] [DEBUG] debug-file - Executing task :entry:default@ProcessResource
+[2024-08-07T09:32:11.035] [DEBUG] debug-file - Incremental task entry:default@ProcessResource pre-execution cost: 1 ms .
+[2024-08-07T09:32:11.035] [DEBUG] debug-file - entry : default@ProcessResource cost memory 0.3381500244140625
+[2024-08-07T09:32:11.039] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessResource...  
+[2024-08-07T09:32:11.041] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:11.041] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:11.044] [DEBUG] debug-file - Executing task :entry:default@GenerateLoaderJson
+[2024-08-07T09:32:11.057] [DEBUG] debug-file - Incremental task entry:default@GenerateLoaderJson pre-execution cost: 9 ms .
+[2024-08-07T09:32:11.057] [DEBUG] debug-file - entry : default@GenerateLoaderJson cost memory 0.5065689086914062
+[2024-08-07T09:32:11.062] [INFO] debug-file - UP-TO-DATE :entry:default@GenerateLoaderJson...  
+[2024-08-07T09:32:11.065] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:11.065] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:11.067] [DEBUG] debug-file - Executing task :entry:default@ProcessLibs
+[2024-08-07T09:32:11.069] [DEBUG] debug-file - Incremental task entry:default@ProcessLibs pre-execution cost: 2 ms .
+[2024-08-07T09:32:11.069] [DEBUG] debug-file - entry : default@ProcessLibs cost memory 0.076202392578125
+[2024-08-07T09:32:11.070] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessLibs...  
+[2024-08-07T09:32:11.072] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:11.072] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:11.073] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@CompileResource
+[2024-08-07T09:32:11.075] [DEBUG] debug-file - Executing task :entry:default@CompileResource
+[2024-08-07T09:32:11.091] [DEBUG] debug-file - Incremental task entry:default@CompileResource pre-execution cost: 14 ms .
+[2024-08-07T09:32:11.091] [DEBUG] debug-file - entry : default@CompileResource cost memory 0.7410812377929688
+[2024-08-07T09:32:11.093] [INFO] debug-file - UP-TO-DATE :entry:default@CompileResource...  
+[2024-08-07T09:32:11.095] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:11.096] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:11.098] [DEBUG] debug-file - Executing task :entry:default@DoNativeStrip
+[2024-08-07T09:32:11.099] [DEBUG] debug-file - Incremental task entry:default@DoNativeStrip pre-execution cost: 1 ms .
+[2024-08-07T09:32:11.099] [DEBUG] debug-file - entry : default@DoNativeStrip cost memory 0.062591552734375
+[2024-08-07T09:32:11.100] [INFO] debug-file - UP-TO-DATE :entry:default@DoNativeStrip...  
+[2024-08-07T09:32:11.101] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:11.102] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:11.105] [DEBUG] debug-file - Executing task :entry:default@CompileArkTS
+[2024-08-07T09:32:11.128] [DEBUG] debug-file - Incremental task entry:default@CompileArkTS pre-execution cost: 19 ms .
+[2024-08-07T09:32:11.128] [DEBUG] debug-file - entry : default@CompileArkTS cost memory 0.9684906005859375
+[2024-08-07T09:32:11.131] [INFO] debug-file - UP-TO-DATE :entry:default@CompileArkTS...  
+[2024-08-07T09:32:11.134] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:11.134] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:11.138] [DEBUG] debug-file - Executing task :entry:default@BuildJS
+[2024-08-07T09:32:11.143] [DEBUG] debug-file - entry : default@BuildJS cost memory 0.13584136962890625
+[2024-08-07T09:32:11.143] [DEBUG] debug-file - runTaskFromQueue task cost before running: 386 ms 
+[2024-08-07T09:32:11.143] [INFO] debug-file - Finished :entry:default@BuildJS... after 5 ms 
+[2024-08-07T09:32:11.146] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:11.146] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:11.149] [DEBUG] debug-file - Executing task :entry:default@CacheNativeLibs
+[2024-08-07T09:32:11.151] [DEBUG] debug-file - Incremental task entry:default@CacheNativeLibs pre-execution cost: 2 ms .
+[2024-08-07T09:32:11.152] [DEBUG] debug-file - entry : default@CacheNativeLibs cost memory 0.079559326171875
+[2024-08-07T09:32:11.153] [INFO] debug-file - UP-TO-DATE :entry:default@CacheNativeLibs...  
+[2024-08-07T09:32:11.156] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:11.156] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:11.158] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgModuleJson
+[2024-08-07T09:32:11.161] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgModuleJson pre-execution cost: 2 ms .
+[2024-08-07T09:32:11.162] [DEBUG] debug-file - entry : default@GeneratePkgModuleJson cost memory 0.0921478271484375
+[2024-08-07T09:32:11.162] [INFO] debug-file - UP-TO-DATE :entry:default@GeneratePkgModuleJson...  
+[2024-08-07T09:32:11.165] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:11.165] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:11.173] [DEBUG] debug-file - Executing task :entry:default@PackageHap
+[2024-08-07T09:32:11.184] [DEBUG] debug-file - Incremental task entry:default@PackageHap pre-execution cost: 9 ms .
+[2024-08-07T09:32:11.184] [DEBUG] debug-file - entry : default@PackageHap cost memory 0.47113800048828125
+[2024-08-07T09:32:11.186] [INFO] debug-file - UP-TO-DATE :entry:default@PackageHap...  
+[2024-08-07T09:32:11.188] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-08-07T09:32:11.188] [DEBUG] debug-file - jsonObjWithoutParam {"name":"entry","version":"1.0.0","description":"Please describe the basic information.","main":"","author":"","license":"","dependencies":{}} at undefined
+[2024-08-07T09:32:11.191] [DEBUG] debug-file - Executing task :entry:default@SignHap
+[2024-08-07T09:32:11.191] [WARN] debug-file - Will skip sign 'hos_hap'. No signingConfigs profile is configured in current project.
+             If needed, configure the signingConfigs in D:\HLQ\Documents\HarmonyProject\MyWeather\build-profile.json5.
+[2024-08-07T09:32:11.192] [DEBUG] debug-file - entry:default@SignHap is not up-to-date, since the output file 'D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\outputs\default\entry-default-signed.hap' does not exist.
+[2024-08-07T09:32:11.192] [DEBUG] debug-file - Incremental task entry:default@SignHap pre-execution cost: 1 ms .
+[2024-08-07T09:32:11.193] [DEBUG] debug-file - entry : default@SignHap cost memory 0.1318206787109375
+[2024-08-07T09:32:11.193] [DEBUG] debug-file - runTaskFromQueue task cost before running: 436 ms 
+[2024-08-07T09:32:11.193] [INFO] debug-file - Finished :entry:default@SignHap... after 2 ms 
+[2024-08-07T09:32:11.195] [DEBUG] debug-file - Executing task :entry:assembleHap
+[2024-08-07T09:32:11.195] [DEBUG] debug-file - entry : assembleHap cost memory 0.01145172119140625
+[2024-08-07T09:32:11.195] [DEBUG] debug-file - runTaskFromQueue task cost before running: 438 ms 
+[2024-08-07T09:32:11.195] [INFO] debug-file - Finished :entry:assembleHap... after 1 ms 
+[2024-08-07T09:32:11.206] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@PreBuild is up-to-date.
+[2024-08-07T09:32:11.206] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GenerateMetadata is up-to-date.
+[2024-08-07T09:32:11.206] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@MergeProfile is up-to-date.
+[2024-08-07T09:32:11.206] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CreateBuildProfile is up-to-date.
+[2024-08-07T09:32:11.206] [DEBUG] debug-file - Update task entry:default@GeneratePkgContextInfo output file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\loader\default\pkgContextInfo.json cache.
+[2024-08-07T09:32:11.207] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgContextInfo post-execution cost:1 ms .
+[2024-08-07T09:32:11.208] [DEBUG] debug-file - Update task entry:default@ProcessIntegratedHsp output file:D:\HLQ\Documents\HarmonyProject\MyWeather\build\cache\default\integrated_hsp\integratedHspCache.json cache.
+[2024-08-07T09:32:11.208] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp post-execution cost:1 ms .
+[2024-08-07T09:32:11.208] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@MakePackInfo is up-to-date.
+[2024-08-07T09:32:11.208] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessProfile is up-to-date.
+[2024-08-07T09:32:11.209] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:E:\DevEco5.0.3\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\openharmony\toolchains\syscap_tool.exe cache by regenerate.
+[2024-08-07T09:32:11.210] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:E:\DevEco5.0.3\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\openharmony\ets\api\device-define cache by regenerate.
+[2024-08-07T09:32:11.211] [DEBUG] debug-file - Update task entry:default@SyscapTransform output file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\syscap\default\rpcid.sc cache.
+[2024-08-07T09:32:11.212] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform post-execution cost:4 ms .
+[2024-08-07T09:32:11.212] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessRouterMap is up-to-date.
+[2024-08-07T09:32:11.212] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessResource is up-to-date.
+[2024-08-07T09:32:11.212] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GenerateLoaderJson is up-to-date.
+[2024-08-07T09:32:11.212] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessLibs is up-to-date.
+[2024-08-07T09:32:11.212] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CompileResource is up-to-date.
+[2024-08-07T09:32:11.212] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@DoNativeStrip is up-to-date.
+[2024-08-07T09:32:11.212] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CompileArkTS is up-to-date.
+[2024-08-07T09:32:11.215] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\loader\default cache by regenerate.
+[2024-08-07T09:32:11.215] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\res\default\resources\rawfile cache by regenerate.
+[2024-08-07T09:32:11.216] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2024-08-07T09:32:11.216] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\res\default\module.json cache by regenerate.
+[2024-08-07T09:32:11.216] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2024-08-07T09:32:11.217] [DEBUG] debug-file - Update task entry:default@BuildJS output file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\intermediates\loader_out\default\js cache.
+[2024-08-07T09:32:11.218] [DEBUG] debug-file - Incremental task entry:default@BuildJS post-execution cost:6 ms .
+[2024-08-07T09:32:11.218] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CacheNativeLibs is up-to-date.
+[2024-08-07T09:32:11.218] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GeneratePkgModuleJson is up-to-date.
+[2024-08-07T09:32:11.218] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@PackageHap is up-to-date.
+[2024-08-07T09:32:11.218] [DEBUG] debug-file - Update task entry:default@SignHap input file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\outputs\default\entry-default-unsigned.hap cache by regenerate.
+[2024-08-07T09:32:11.219] [DEBUG] debug-file - Update task entry:default@SignHap output file:D:\HLQ\Documents\HarmonyProject\MyWeather\entry\build\default\outputs\default\entry-default-signed.hap cache.
+[2024-08-07T09:32:11.219] [DEBUG] debug-file - Incremental task entry:default@SignHap post-execution cost:1 ms .

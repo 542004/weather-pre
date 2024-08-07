@@ -33,7 +33,9 @@ import {weatherDataHelper} from '../dal/WeatherDataHelper'
 import { hilog } from '@kit.PerformanceAnalysisKit'
 import { DailyAreaComponent } from '../view/DailyAreaComponent'
 
-
+/**
+ * fixdaily分支
+ */
 @Entry
 @Component
 struct Index {
