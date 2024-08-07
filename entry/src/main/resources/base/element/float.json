@@ -1,0 +1,36 @@
+{
+  "float": [
+    {
+      "name": "common_font_size",
+      "value": "16"
+    },
+    {
+      "name": "title_font_size",
+      "value": "24"
+    },
+    {
+      "name": "large_font_size",
+      "value": "96"
+    },
+    {
+      "name": "common_space_size",
+      "value": "10"
+    },
+    {
+      "name": "small_space_size",
+      "value": "5"
+    },
+    {
+      "name": "common_pic_size",
+      "value": "48"
+    },
+    {
+      "name": "small_pic_size",
+      "value": "26"
+    },
+    {
+      "name": "medium_font_size",
+      "value": "22"
+    }
+  ]
+}
