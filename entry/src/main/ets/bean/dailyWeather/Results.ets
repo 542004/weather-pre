@@ -16,9 +16,12 @@ export class DailyItem{
   public wind_scale: string=''
   public humidity: string=''
 }
+// export class DailyItemArray{
+//   public dailyItemArray:Array<DailyItem>=[]
+// }
 export class DailyWeatherResult{
   public location:Location=new Location()
-  public daily:DailyItem[]=[]
+  public daily:Array<DailyItem>=[]
   public last_update:string=''
 }
 export class DailyWeatherResults{

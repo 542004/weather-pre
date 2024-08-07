@@ -86,8 +86,9 @@ struct Index {
           }.height('17%')
           //每天信息
           Row(){
-            // DailyAreaComponent({city:city})
-          }.height('20%')
+            DailyAreaComponent({city:city})
+              .backgroundColor(Color.Orange)
+          }.height('20%').backgroundColor(Color.Gray)
 
           //每小时信息
           Row(){

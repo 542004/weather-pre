@@ -8,7 +8,7 @@ export class HttpGetDailyWeather {//
     let httpRequest = http.createHttp();
     try {
       const response = await httpRequest.request(
-        CommonConstants.HOURLY_AIR_URL+city+'&language=zh-Hans&unit=c&start=0&days=15',//
+        CommonConstants.DAILY_URL+city+'&language=zh-Hans&unit=c&start=0&days=15',//
         {
           method: http.RequestMethod.GET,
         }

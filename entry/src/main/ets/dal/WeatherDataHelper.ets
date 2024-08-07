@@ -28,8 +28,8 @@ class WeatherDataHelper{
   }
 
   // DailyDetailViewModel 返回15天
-  public getDailyDetail(model:DailyWeatherResult):DailyItem[]{
-    return model.daily
+  public getDailyDetail(model:DailyWeatherResult){
+    // return model.daily
     // let ans:DailyItem[]=[]
     // for(let i=0;i<model.length;i++){
     //   let item=model[i]
@@ -54,7 +54,7 @@ class WeatherDataHelper{
   //DailyViewModel 返回3天
   public getDaily(model:DailyWeatherResult):DailyViewModel[]{
     let ans:DailyViewModel[]=[]
-    for(let i=0;i<model.daily.length;i++){
+    for(let i=0;i<3;i++){
       ans.push({
         week:model.daily[i].date,
         weather:model.daily[i].text_day,

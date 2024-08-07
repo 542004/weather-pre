@@ -24,8 +24,7 @@ export struct WarningAreaComponent{
   //文件名+results  array
   //内部model 文件名+model array[0]
 
-  aboutToAppear(): void {
-    let httpGetWarning:HttpGetWarning=new HttpGetWarning()
+  aboutToAppear(): void {    let httpGetWarning:HttpGetWarning=new HttpGetWarning()
     httpGetWarning.getHttp(this.city).then((res:WarningWeatherResults)=>{
       let item=res.results[0]
       this.warningViewModel=weatherDataHelper.getWarning(item)
