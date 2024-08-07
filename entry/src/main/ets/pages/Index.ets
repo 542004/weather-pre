@@ -32,7 +32,9 @@ import {weatherDataHelper} from '../dal/WeatherDataHelper'
 //导入其他
 import { hilog } from '@kit.PerformanceAnalysisKit'
 import { DailyAreaComponent } from '../view/DailyAreaComponent'
-
+/**
+ * Geo分支
+ */
 
 @Entry
 @Component
