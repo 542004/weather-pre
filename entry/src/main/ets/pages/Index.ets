@@ -37,7 +37,6 @@ import { DailyAreaComponent } from '../view/DailyAreaComponent'
 @Entry
 @Component
 struct Index {
-  //viewModel
   // @State nowViewModel:NowViewModel=new NowViewModel()
   // @State nowWeatherResult:NowWeatherResult=new NowWeatherResult()
   // @State citiesWeatherViewModel:Array<CityWeatherViewModel>=[]
