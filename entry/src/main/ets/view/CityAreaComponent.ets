@@ -1,5 +1,8 @@
 import router from '@ohos.router';
 import { BusinessError } from '@ohos.base';
+/**
+ * 城市管理的加号
+ */
 @Component
 export struct CityAreaComponent{
 

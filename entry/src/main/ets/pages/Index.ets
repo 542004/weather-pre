@@ -52,7 +52,7 @@ struct Index {
   // @State nowWeatherModel:NowWeatherResult=new NowWeatherResult()
   // @State simpleModel:SimpleResults=new SimpleResults()
   //city
-  @State cities:string[]=['南昌','西安']
+  @State cities:string[]=['西安']
 
   aboutToAppear() {
 
@@ -99,7 +99,7 @@ struct Index {
         // .backgroundColor('#33cccc')
       })
     }
-    // .backgroundColor('#B0E0E6')
+    .backgroundColor('#B0E0E6')
     .height('100%')
     .width('100%')
     .loop(false)

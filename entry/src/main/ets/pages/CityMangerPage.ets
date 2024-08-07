@@ -1,9 +1,9 @@
-
+import {CityCardItemComponent} from '../view/CityCardItemComponent'
 import {BackComponent} from '../view/BackComponent'
 @Entry
 @Component
 struct CityMangerPage {
-  @State message: string = '城市管理页面';
+  // @State message: string = '城市管理页面';
 
   build() {
     Column() {
@@ -22,6 +22,9 @@ struct CityMangerPage {
       .height('5%')
       .width('90%')
       .justifyContent(FlexAlign.Start)
+      Row(){
+        CityCardItemComponent({city:'南昌'})
+      }
 
     }
     .height('100%')
