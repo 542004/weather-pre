@@ -1,9 +1,11 @@
 import {NowViewModel} from '../viewmodel/NowViewModel';
-import { HttpGetSimpleWeather } from '../util/HttpGetSimpleWeather'
+import {DailyViewModel} from '../viewmodel/DailyViewModel';
+
+import { HttpGetDailyWeather} from '../util/HttpGetDailyWeather'
 import { HttpGetNowWeather } from '../util/HttpGetNowWeather'
 
 import {NowWeatherResult,NowWeatherResults} from '../bean/nowWeather/Results'
-import {SimpleResults} from '../bean/simpleData/Results'
+import {DailyWeatherResults,DailyWeatherResult} from '../bean/dailyWeather/Results'
 
 import {weatherDataHelper} from '../dal/WeatherDataHelper'
 
@@ -15,21 +17,29 @@ struct NowAreaComponent{
   @Prop city:string
   @State nowViewModel:NowViewModel=new NowViewModel()
   @State nowWeatherModel:NowWeatherResult=new NowWeatherResult()
+  @State dailyViewModel:DailyViewModel=new DailyViewModel()
   aboutToAppear(): void {
     //httpGetNowWeather
     let httpGetNowWeather:HttpGetNowWeather=new HttpGetNowWeather()
     httpGetNowWeather.getHttp(this.city).then((res:NowWeatherResults)=>{
-      // this.nowWeatherResults = res
       this.nowWeatherModel =res.results[0]
+      this.nowViewModel.temp=this.nowWeatherModel.now.temperature
     })
-    //NowArea的数据 Simple
-    let httpGetSimpleWeather:HttpGetSimpleWeather=new HttpGetSimpleWeather()
-    httpGetSimpleWeather.getHttp('%E6%8B%89%E8%90%A8').then((res:SimpleResults)=>{
-      // this.simpleModel=res
-      this.nowViewModel=weatherDataHelper.getNow(res,this.nowWeatherModel)
-      hilog.info(0x1111,'mytag','%{public}s',JSON.stringify(this.nowViewModel))
+
+    let httpGetDailyWeather:HttpGetDailyWeather=new HttpGetDailyWeather()//
+    httpGetDailyWeather.getHttp(this.city).then((res:DailyWeatherResults)=>{
+      let resItem=res.results[0]
+      this.dailyViewModel=weatherDataHelper.getDaily(resItem)[0]
+      this.nowViewModel.weather=this.dailyViewModel.weather
+      this.nowViewModel.tempHigh=this.dailyViewModel.tempHigh
+      this.nowViewModel.tempLow=this.dailyViewModel.tempLow
+      hilog.debug(0x1111,'mytag11','%{public}s','实况区域的aboutToAppear处获取DailyWeather成功'+JSON.stringify(this.dailyViewModel))
+    })
+    .catch(()=>{
+      hilog.debug(0x1111,'mytag11','%{public}s','aboutToAppear处获取DailyWeather失败')
     })
   }
+
   build() {
     Column(){
       Row(){
