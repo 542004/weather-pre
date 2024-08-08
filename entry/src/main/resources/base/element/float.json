@@ -5,6 +5,10 @@
       "value": "16"
     },
     {
+      "name": "medium_font_size",
+      "value": "22"
+    },
+    {
       "name": "title_font_size",
       "value": "24"
     },
@@ -27,10 +31,7 @@
     {
       "name": "small_pic_size",
       "value": "26"
-    },
-    {
-      "name": "medium_font_size",
-      "value": "22"
     }
+
   ]
 }

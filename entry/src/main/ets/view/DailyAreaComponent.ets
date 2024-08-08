@@ -28,7 +28,7 @@ export struct DailyAreaComponent{//
       let resItem=res.results[0]
       this.dailyDetailViewModel_Array=weatherDataHelper.getDailyDetail(resItem) //15天的详细数据
       this.dailyViewModel_Array=weatherDataHelper.getDaily(resItem)
-      hilog.debug(0x1111,'mytag11','%{public}s','aboutToAppear处获取DailyWeather成功'+JSON.stringify(this.dailyViewModel_Array))
+      hilog.debug(0x1111,'mytag11','%{public}s','aboutToAppear处获取DailyWeather成功')
     })
       .catch(()=>{
         hilog.debug(0x1111,'mytag11','%{public}s','aboutToAppear处获取DailyWeather失败')
@@ -49,10 +49,10 @@ export struct DailyAreaComponent{//
                 .margin($r('app.float.small_space_size'))
               Image('picture/white/'+item.Img+'@1x.png')
                 .width(20)
-              Text(item.tempHigh)
+              Text(item.tempHigh+'°')
                 .fontColor(Color.White)
                 .margin($r('app.float.small_space_size'))
-              Text(item.tempLow)
+              Text(item.tempLow+'°')
                 .fontColor(Color.White)
                 .margin($r('app.float.small_space_size'))
             }

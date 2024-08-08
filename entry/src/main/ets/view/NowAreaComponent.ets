@@ -43,7 +43,7 @@ struct NowAreaComponent{
   build() {
     Column(){
       Row(){
-        Text(this.nowViewModel.temp)
+        Text(this.nowViewModel.temp+'°')
           .fontSize($r('app.float.large_font_size'))
       }
       .layoutWeight(3)
@@ -57,12 +57,12 @@ struct NowAreaComponent{
         }
         .margin({right:$r('app.float.common_space_size')})
         Column(){
-          Text('最高'+this.nowViewModel.tempHigh)
+          Text('最高'+this.nowViewModel.tempHigh+'°')
             .fontSize($r('app.float.medium_font_size'))
         }
         .margin({right:$r('app.float.small_space_size')})
         Column(){
-          Text('最低'+this.nowViewModel.tempLow)
+          Text('最低'+this.nowViewModel.tempLow+'°')
             .fontSize($r('app.float.medium_font_size'))
         }
       }

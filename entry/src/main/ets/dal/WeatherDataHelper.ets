@@ -13,6 +13,7 @@ import {WarningViewModel} from '../viewmodel/WarningViewModel'
 import {HourlyAirResult,HourlyAirResults} from '../bean/hourlyAir/Results'
 import {NowWeatherResult,NowWeatherResults} from '../bean/nowWeather/Results'
 import {WarningWeatherResult,WarningWeatherResults} from '../bean/warningWeather/Results'
+import {HourlyWeatherResult,HourlyWeatherResults} from '../bean/hourlyWeather/Results'
 import {DailyWeatherResult,DailyWeatherResults,DailyItem} from '../bean/dailyWeather/Results'
 import {SimpleResults} from '../bean/simpleData/Results'
 
@@ -62,8 +63,15 @@ class WeatherDataHelper{
     return ans
   }
   //HourlyViewModel
-  public getHourly(){
-
+  public getHourly(model:HourlyWeatherResult):HourlyViewModel[]{
+    let ans:HourlyViewModel[]=[]
+    for(let i=0;i<model.hourly.length;i++){
+      ans.push(
+        new HourlyViewModel(model.hourly[i].time,model.hourly[i].code,
+          model.hourly[i].temperature, model.hourly[i].wind_speed)
+      )
+    }
+    return ans;
   }
 
   //MoreDailyViewModel

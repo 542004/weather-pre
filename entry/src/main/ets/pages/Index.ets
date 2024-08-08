@@ -15,7 +15,7 @@ import {AqiAreaComponent} from '../view/AqiAreaComponent'
 import {AddressAreaComponent} from  '../view/AddressAreaComponent'
 import {CityAreaComponent} from '../view/CityAreaComponent'
 import {WarningAreaComponent} from '../view/WarningAreaComponent'
-
+import {HourlyAreaComponent} from '../view/HourlyAreaComponent'
 // 导入bean
 import {HourlyAirResult,HourlyAirResults} from '../bean/hourlyAir/Results'
 import {NowWeatherResult,NowWeatherResults} from '../bean/nowWeather/Results'
@@ -52,7 +52,7 @@ struct Index {
   // @State nowWeatherModel:NowWeatherResult=new NowWeatherResult()
   // @State simpleModel:SimpleResults=new SimpleResults()
   //city
-  @State cities:string[]=['西安']
+  @State cities:string[]=['南昌']
 
   aboutToAppear() {
 
@@ -91,7 +91,8 @@ struct Index {
 
           //每小时信息
           Row(){
-
+            HourlyAreaComponent({city:city})
+              // .backgroundColor((Color.Red))
           }.height('25%')
         }
         .height('100%')
