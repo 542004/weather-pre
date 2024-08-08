@@ -49,28 +49,31 @@ export struct CityCardItemComponent{
     Row(){
       Column(){
         Row(){
-          Text(this.resItem.location.name+'kkkkkkk')
-            .fontSize($r('app.float.common_font_size'))
+          Text(this.resItem.location.name)
+            .fontSize($r('app.float.medium_font_size'))
             .fontColor(Color.White)
         }
         Row(){
           Text(this.nowViewModel.weather)
             .fontSize($r('app.float.common_font_size'))
             .fontColor(Color.White)
-          Text(this.nowViewModel.tempHigh)
-            .fontSize($r('app.float.common_font_size'))
-            .fontColor(Color.White)
-          Text(this.nowViewModel.tempLow)
+          Text(this.nowViewModel.tempHigh+'°/'+this.nowViewModel.tempLow+'°')
             .fontSize($r('app.float.common_font_size'))
             .fontColor(Color.White)
         }
       }
+      .height('100%')
+      .width('30%')
+      .justifyContent(FlexAlign.Center)
       Column(){
-        Text(this.nowViewModel.temp)
+        Text(this.nowViewModel.temp+'°')
           .fontSize($r('app.float.title_font_size'))
           .fontWeight(FontWeight.Bold)
           .fontColor(Color.White)
       }
+      .height('100%')
+      .width('20%')
+      .justifyContent(FlexAlign.Center)
     }
     .height('12.5%')
     .width('90%')

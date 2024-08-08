@@ -5,7 +5,7 @@ import { BusinessError } from '@ohos.base';
  */
 @Component
 export struct CityAreaComponent{
-
+  @Prop cities:string[]=[]
   build() {
    Row(){
      Image($r('app.media.add'))
@@ -13,7 +13,8 @@ export struct CityAreaComponent{
        .width($r('app.float.common_pic_size'))
        .onClick(()=>{
           router.pushUrl({
-            url:'pages/CityMangerPage'
+            url:'pages/CityMangerPage',
+            params: this.cities
           })
             .then(()=>{
               console.info('跳转城市管理页面成功')

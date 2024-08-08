@@ -1,9 +1,11 @@
 import {CityCardItemComponent} from '../view/CityCardItemComponent'
 import {BackComponent} from '../view/BackComponent'
+import { router } from '@kit.ArkUI'
+
 @Entry
 @Component
 struct CityMangerPage {
-  // @State message: string = '城市管理页面';
+   readonly  cities: string[] =router.getParams() as string[];
 
   build() {
     Column() {
@@ -22,8 +24,13 @@ struct CityMangerPage {
       .height('5%')
       .width('90%')
       .justifyContent(FlexAlign.Start)
+
       Row(){
-        CityCardItemComponent({city:'南昌'})
+        List(){
+          ForEach(this.cities,(city:string)=>{
+            CityCardItemComponent({city:city})
+          })
+        }
       }
 
     }

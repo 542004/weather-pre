@@ -71,7 +71,7 @@ struct Index {
         Column(){
           //城市管理的添加
           Row(){
-            CityAreaComponent()
+            CityAreaComponent({cities:this.cities})
           }.height('5%')
           //定位
           Row(){
