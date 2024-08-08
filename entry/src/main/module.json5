@@ -53,8 +53,13 @@
       {
         "name": "ohos.permission.INTERNET"
       },
-
-    ],
-
+      {
+        "name": "ohos.permission.APPROXIMATELY_LOCATION",
+        "reason": '$string:locate_reason',
+        "usedScene": {
+          "when": "inuse"
+        }
+      }
+    ]
   }
 }

@@ -32,7 +32,8 @@ import {weatherDataHelper} from '../dal/WeatherDataHelper'
 //导入其他
 import { hilog } from '@kit.PerformanceAnalysisKit'
 import { DailyAreaComponent } from '../view/DailyAreaComponent'
-
+import { router } from '@kit.ArkUI'
+import {HttpGetCurrentCity} from '../util/HttpGetCurrentCity'
 /**
  * fixdaily分支
  */
@@ -52,9 +53,16 @@ struct Index {
   // @State nowWeatherModel:NowWeatherResult=new NowWeatherResult()
   // @State simpleModel:SimpleResults=new SimpleResults()
   //city
-  @State cities:string[]=['南昌']
+  @State cities:string[]=[]
 
   aboutToAppear() {
+    let httpGetCurrentCity:HttpGetCurrentCity=new HttpGetCurrentCity()
+    httpGetCurrentCity.getHttp('').then((res:SimpleResults)=>{
+      this.cities.push(res.city)
+    })
+      .catch(()=>{
+        console.info('获取当前位置失败')
+      })
 
   }
   build() {

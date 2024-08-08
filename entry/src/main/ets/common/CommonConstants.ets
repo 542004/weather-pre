@@ -13,4 +13,6 @@ export default class CommonConstants{
   static readonly HOUTLY_URL:string='https://api.seniverse.com/v3/weather/hourly.json?key=SzCabRsMKrFGWNul7&location='
   //3天生活指数
   static readonly LIVE_INDEX_URL:string='https://api.seniverse.com/v3/life/suggestion.json?key=SzCabRsMKrFGWNul7&location=shanghai&language=zh-Hans&days=3'
+  //自动识别
+  static readonly CURRENT_CITY_URL:string='https://api.vvhan.com/api/weather'
 }

@@ -42,7 +42,8 @@ export struct HourlyAreaComponent{
     }
     .width('90%')
     .width('90%')
-    .backgroundColor(Color.White)
+    .backgroundColor(Color.Gray)
+    .opacity(0.8)
     .borderRadius(15)
   }
 }
