@@ -53,7 +53,7 @@ struct Index {
   // @State nowWeatherModel:NowWeatherResult=new NowWeatherResult()
   // @State simpleModel:SimpleResults=new SimpleResults()
   //city
-  @State cities:string[]=[]
+  @State cities:string[]=['成都']
 
   aboutToAppear() {
     let httpGetCurrentCity:HttpGetCurrentCity=new HttpGetCurrentCity()

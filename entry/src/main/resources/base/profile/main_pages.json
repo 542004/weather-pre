@@ -4,6 +4,7 @@
     "pages/CityMangerPage",
     "pages/AqiPage",
     "pages/WarningDetailPage",
-    "pages/DailyDetailPage"
+    "pages/DailyDetailPage",
+    "pages/SearchPage"
   ]
 }

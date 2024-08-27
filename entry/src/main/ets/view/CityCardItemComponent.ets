@@ -65,6 +65,7 @@ export struct CityCardItemComponent{
       .height('100%')
       .width('30%')
       .justifyContent(FlexAlign.Center)
+      Blank();
       Column(){
         Text(this.nowViewModel.temp+'°')
           .fontSize($r('app.float.title_font_size'))
@@ -76,7 +77,7 @@ export struct CityCardItemComponent{
       .justifyContent(FlexAlign.Center)
     }
     .height('12.5%')
-    .width('90%')
+    .width('100%')
     .backgroundColor(Color.Brown)
     .justifyContent(FlexAlign.SpaceBetween)
     .onClick(()=>{
