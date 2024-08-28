@@ -8,6 +8,7 @@ import {DailyDetailViewModel} from '../viewmodel/DailyDetailViewModel'
 import {NowViewModel} from '../viewmodel/NowViewModel'
 import {WarningViewModel} from '../viewmodel/WarningViewModel'
 import {LiveCardsViewModel} from '../viewmodel/LiveCardsViewModel'
+import {WeatherCardsViewModel} from '../viewmodel/WeatherCardsViewModel'
 /**
  * bean的导入
  */
@@ -101,6 +102,16 @@ class WeatherDataHelper{
     return ans;
   }
 
+  //
+  public getWeatherCards(model:NowWeatherResult):WeatherCardsViewModel{
+    let ans:WeatherCardsViewModel=new WeatherCardsViewModel();
+    ans.pressure=model.now.pressure
+    ans.feels_like=model.now.feels_like
+    ans.wind_direction=model.now.wind_direction
+    ans.wind_speed=model.now.wind_speed
+    ans.pressure=model.now.pressure
+    return ans;
+  }
   //LiveIndex
   public getLiveIndex(model:LiveIndexResult):LiveCardsViewModel{
     let ans:LiveCardsViewModel=new LiveCardsViewModel()

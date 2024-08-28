@@ -17,6 +17,7 @@ import {CityAreaComponent} from '../view/CityAreaComponent'
 import {WarningAreaComponent} from '../view/WarningAreaComponent'
 import {HourlyAreaComponent} from '../view/HourlyAreaComponent'
 import {LiveIndexComponent} from '../view/LiveIndexComponent'
+import {WeatherCardsComponent} from '../view/WeatherCardsComponent'
 // 导入bean
 import {HourlyAirResult,HourlyAirResults} from '../bean/hourlyAir/Results'
 import {NowWeatherResult,NowWeatherResults} from '../bean/nowWeather/Results'
@@ -117,8 +118,7 @@ struct Index {
               }
               //六张卡片
               ListItem(){
-                // HourlyAreaComponent({city:city})
-                // // .backgroundColor((Color.Red))
+                WeatherCardsComponent({city:city})
               }
               // .backgroundColor(Color.Green)
               //六张卡片

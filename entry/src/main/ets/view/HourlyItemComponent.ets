@@ -6,17 +6,20 @@ export struct HourlyItemComponent{
   @Prop index:number
   build() {
     Column(){
+      Blank()
+        .height('10%')
       Text(this.hourlyViewModel.temp+'°')
       Image('/picture/white/'+this.hourlyViewModel.Img.toString()+'@1x.png')
         .width(20)
       Text(this.hourlyViewModel.windSpeed+'km/h')
-        .fontSize($r('app.float.common_font_size'))
+        .fontSize(12)
       Text((this.index==0)?'现在':this.hourlyViewModel.time.slice(11,16))
-        .fontSize($r('app.float.common_font_size'))
+        .fontSize(14)
         .fontWeight(FontWeight.Normal)
     }
     .width('14%')
     .height('90%')
+    .backgroundColor(Color.Green)
     .justifyContent(FlexAlign.SpaceBetween)
   }
 
