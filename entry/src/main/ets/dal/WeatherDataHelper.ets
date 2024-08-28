@@ -7,6 +7,7 @@ import {HourlyViewModel} from  '../viewmodel/HourlyViewModel'
 import {DailyDetailViewModel} from '../viewmodel/DailyDetailViewModel'
 import {NowViewModel} from '../viewmodel/NowViewModel'
 import {WarningViewModel} from '../viewmodel/WarningViewModel'
+import {LiveCardsViewModel} from '../viewmodel/LiveCardsViewModel'
 /**
  * bean的导入
  */
@@ -16,7 +17,7 @@ import {WarningWeatherResult,WarningWeatherResults} from '../bean/warningWeather
 import {HourlyWeatherResult,HourlyWeatherResults} from '../bean/hourlyWeather/Results'
 import {DailyWeatherResult,DailyWeatherResults,DailyItem} from '../bean/dailyWeather/Results'
 import {SimpleResults} from '../bean/simpleData/Results'
-
+import {LiveIndexResults,LiveIndexResult} from '../bean/liveIndex/Results'
 
 
 class WeatherDataHelper{
@@ -46,7 +47,6 @@ class WeatherDataHelper{
     }
     return ans;
   }
-
 
   //DailyViewModel 返回3天
   public getDaily(model:DailyWeatherResult):DailyViewModel[]{
@@ -98,6 +98,25 @@ class WeatherDataHelper{
         description:model.alarms[i].description
       })
     }
+    return ans;
+  }
+
+  //LiveIndex
+  public getLiveIndex(model:LiveIndexResult):LiveCardsViewModel{
+    let ans:LiveCardsViewModel=new LiveCardsViewModel()
+    ans.dress.brief=model.suggestion[0].dressing.brief
+    ans.dress.details=model.suggestion[0].dressing.details
+    ans.uv.brief=model.suggestion[0].uv.brief
+    ans.uv.details=model.suggestion[0].uv.details
+    ans.sport.brief=model.suggestion[0].sport.brief
+    ans.sport.details=model.suggestion[0].sport.details
+    ans.car_washing.brief=model.suggestion[0].car_washing.brief
+    ans.car_washing.details=model.suggestion[0].car_washing.details
+    ans.umbrella.brief=model.suggestion[0].umbrella.brief
+    ans.umbrella.details=model.suggestion[0].umbrella.details
+    ans.flu.brief=model.suggestion[0].flu.brief
+    ans.flu.details=model.suggestion[0].flu.details
+    ans.sport
     return ans;
   }
 }

@@ -16,6 +16,7 @@ import {AddressAreaComponent} from  '../view/AddressAreaComponent'
 import {CityAreaComponent} from '../view/CityAreaComponent'
 import {WarningAreaComponent} from '../view/WarningAreaComponent'
 import {HourlyAreaComponent} from '../view/HourlyAreaComponent'
+import {LiveIndexComponent} from '../view/LiveIndexComponent'
 // 导入bean
 import {HourlyAirResult,HourlyAirResults} from '../bean/hourlyAir/Results'
 import {NowWeatherResult,NowWeatherResults} from '../bean/nowWeather/Results'
@@ -112,7 +113,7 @@ struct Index {
 
               //降雨预报
               ListItem(){
-                
+
               }
               //六张卡片
               ListItem(){
@@ -122,8 +123,7 @@ struct Index {
               // .backgroundColor(Color.Green)
               //六张卡片
               ListItem(){
-                // HourlyAreaComponent({city:city})
-                // // .backgroundColor((Color.Red))
+                LiveIndexComponent({city:city})
               }
               // .backgroundColor(Color.Yellow)
 

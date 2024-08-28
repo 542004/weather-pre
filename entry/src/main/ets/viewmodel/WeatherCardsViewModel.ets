@@ -7,3 +7,5 @@ export class WeatherCardsViewModel{
   public sunset:string=''
   public pressure:string=''
 }
+
+// uv
