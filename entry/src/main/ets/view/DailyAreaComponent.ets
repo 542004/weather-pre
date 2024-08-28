@@ -84,11 +84,11 @@ export struct DailyAreaComponent{//
       .height('30%')
       .opacity(0.8)
     }
+    .height(160)
     .width('90%')
-    .height('90%')
     .borderRadius(15)
     .backgroundColor(Color.Gray)
     // .opacity(0.5)
-    .margin($r('app.float.common_space_size'))
+    .margin({bottom:10,left:18,right:18})
   }
 }

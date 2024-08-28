@@ -34,6 +34,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit'
 import { DailyAreaComponent } from '../view/DailyAreaComponent'
 import { router } from '@kit.ArkUI'
 import {HttpGetCurrentCity} from '../util/HttpGetCurrentCity'
+import CommonConstants from '../common/CommonConstants';
 /**
  * fixdaily分支
  */
@@ -53,8 +54,9 @@ struct Index {
   // @State nowWeatherModel:NowWeatherResult=new NowWeatherResult()
   // @State simpleModel:SimpleResults=new SimpleResults()
   //city
-  @State cities:string[]=['成都']
-
+  @State cities:string[]=[]
+  @State listHeight: number = 360;
+  private yStart: number = 0;
   aboutToAppear() {
     let httpGetCurrentCity:HttpGetCurrentCity=new HttpGetCurrentCity()
     httpGetCurrentCity.getHttp('').then((res:SimpleResults)=>{
@@ -68,43 +70,93 @@ struct Index {
   build() {
     Swiper(){
       ForEach(this.cities,(city:string)=>{
-        Column(){
-          //城市管理的添加
-          Row(){
-            CityAreaComponent({cities:this.cities})
-          }.height('5%')
-          //定位
-          Row(){
-            AddressAreaComponent({city:city})
-          }.height('5%').margin({bottom:$r('app.float.small_space_size')})
+        Stack({ alignContent: Alignment.TopStart }){
 
-          //当前信息
-          Row(){
-            NowAreaComponent({city:city})
-          }.height('25%')
+          RelativeContainer(){
+            Column(){
+              //城市管理的添加
+              Row(){
+                CityAreaComponent({cities:this.cities})
+              }.height('5%')
+              //定位
+              Row(){
+                AddressAreaComponent({city:city})
+              }.height('5%').margin({bottom:$r('app.float.small_space_size')})
 
-          //aqi信息
-          Row(){
-            AqiAreaComponent({city:city})
-          }.height('3%')
+              //当前信息
+              Row(){
+                NowAreaComponent({city:city})
+              }.height('25%')
 
-          //预警
-          Row(){
-            WarningAreaComponent({city:city})
-          }.height('17%')
-          //每天信息
-          Row(){
-            DailyAreaComponent({city:city})
-          }.height('20%')
+              Row(){
+                AqiAreaComponent({city:city})
+              }.height('3%')
+            }
+            .height('100%')
+            .width('100%')
+            List(){
+              //预警
+              ListItem(){
+                WarningAreaComponent({city:city})
+              }
+              //每天信息
+              ListItem(){
+                DailyAreaComponent({city:city})
+              }
 
-          //每小时信息
-          Row(){
-            HourlyAreaComponent({city:city})
-              // .backgroundColor((Color.Red))
-          }.height('25%')
+              //每小时信息
+              ListItem(){
+                HourlyAreaComponent({city:city})
+                // .backgroundColor((Color.Red))
+              }
+
+              //降雨预报
+              ListItem(){
+                
+              }
+              //六张卡片
+              ListItem(){
+                // HourlyAreaComponent({city:city})
+                // // .backgroundColor((Color.Red))
+              }
+              // .backgroundColor(Color.Green)
+              //六张卡片
+              ListItem(){
+                // HourlyAreaComponent({city:city})
+                // // .backgroundColor((Color.Red))
+              }
+              // .backgroundColor(Color.Yellow)
+
+            }
+            .backgroundColor('#B0E0E6')
+            .height(this.listHeight)
+            .alignRules(CommonConstants.LIST_ALIGN_RULES)
+            .scrollBar(BarState.Off)
+            .animation({
+              duration: 500,
+              curve: Curve.Friction,
+              iterations: 1,
+              playMode: PlayMode.Normal
+            })
+          }
         }
         .height('100%')
         .width('100%')
+        .onTouch((event:TouchEvent)=>{
+          if(event.type===TouchType.Down){
+            this.yStart=event.touches[0].y;
+          }
+          else if(event.type===TouchType.Up){
+            const yEnd=event.touches[0].y;
+            if(yEnd<this.yStart) this.listHeight=720;
+            else if(yEnd>this.yStart) this.listHeight=Math.max(360,this.listHeight-yEnd+this.yStart);
+          }
+          else if(event.type===TouchType.Move){
+            const yEnd=event.touches[0].y;
+            if(yEnd<this.yStart) this.listHeight=Math.min(720,this.listHeight+this.yStart-yEnd);
+            else if(yEnd>this.yStart) this.listHeight=Math.max(360,this.listHeight-yEnd+this.yStart);
+          }
+        })
         // .backgroundColor('#33cccc')
       })
     }

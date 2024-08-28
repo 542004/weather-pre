@@ -1,4 +1,4 @@
-export default class CommonConstants{
+export default  class CommonConstants{
   //天气实况
   static readonly NOW_URL:string='https://api.seniverse.com/v3/weather/now.json?key=S402rOCSb6OqG5IVH'
   //简陋版API
@@ -15,4 +15,12 @@ export default class CommonConstants{
   static readonly LIVE_INDEX_URL:string='https://api.seniverse.com/v3/life/suggestion.json?key=S402rOCSb6OqG5IVH&location=shanghai&language=zh-Hans&days=3'
   //自动识别
   static readonly CURRENT_CITY_URL:string='https://api.vvhan.com/api/weather'
+
+  //
+  static  HAVE_WARNING:boolean=false;
+  static readonly LIST_ALIGN_RULES: AlignRuleOption = {
+    'bottom': { 'anchor': '__container__', 'align': VerticalAlign.Bottom },
+    'left': { 'anchor': '__container__', 'align': HorizontalAlign.Start },
+    'right': { 'anchor': '__container__', 'align': HorizontalAlign.End }
+  };
 }

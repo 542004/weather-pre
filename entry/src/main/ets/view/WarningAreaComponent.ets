@@ -13,6 +13,7 @@ import {weatherDataHelper} from '../dal/WeatherDataHelper'
 //导入其他
 import { hilog } from '@kit.PerformanceAnalysisKit'
 import { router } from '@kit.ArkUI'
+import CommonConstants from '../common/CommonConstants';
 
 
 @Component
@@ -28,6 +29,9 @@ export struct WarningAreaComponent{
     httpGetWarning.getHttp(this.city).then((res:WarningWeatherResults)=>{
       let item=res.results[0]
       this.warningViewModel=weatherDataHelper.getWarning(item)
+      // if(this.warningViewModel.WarningViewModelItemArray.length){
+      //   CommonConstants.HAVE_WARNING=true;
+      // }
     })
   }
   build() {
@@ -69,10 +73,11 @@ export struct WarningAreaComponent{
         }
         .loop(false)
       }
+      .height(160)
+      .width('90%')
+      .margin({bottom:10,left:18,right:18})
       // .opacity(1)
       .backgroundColor('#C0C0C0')
-      .height('100%')
-      .width('100%')
       .borderRadius(15)
       .onClick(()=>{
         router.pushUrl({
@@ -88,8 +93,6 @@ export struct WarningAreaComponent{
 
       })
     }
-    .height('90%')
-    .width('90%')
 
   }
 }

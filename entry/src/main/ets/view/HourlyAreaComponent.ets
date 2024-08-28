@@ -40,10 +40,11 @@ export struct HourlyAreaComponent{
       }
       .listDirection(Axis.Horizontal)
     }
-    .width('90%')
+    .height(180)
     .width('90%')
     .backgroundColor(Color.Gray)
     .opacity(0.8)
     .borderRadius(15)
+    .margin({bottom:10,left:18,right:18})
   }
 }
