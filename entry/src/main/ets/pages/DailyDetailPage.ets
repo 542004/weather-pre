@@ -8,55 +8,63 @@ struct DailyDetailPage {
   @State title: string = '15天趋势预报';
   readonly dailyDeyailViewModel_Array:DailyDetailViewModel[]=router.getParams() as DailyDetailViewModel[]
   build() {
-    Column() {
-      Row(){
-        BackComponent()
-      }
-      .height('8%')
-      .width('90%')
-      .justifyContent(FlexAlign.Start)
-      Row(){
-        Text(this.title)
-          .fontSize($r('app.float.title_font_size'))
-      }
-      .height('12%')
-      .width('90%')
-      .justifyContent(FlexAlign.Start)
-      Row(){
-        List(){
-          ForEach(this.dailyDeyailViewModel_Array,(item:DailyDetailViewModel)=>{
-            ListItem(){
-              Column(){
-                Text(item.week.slice(5))
-                Image('picture/white/'+item.dayImg.toString()+'@1x.png')
-                  .width(20)
-                Text(item.text_day)
-                Text(item.tempHigh+'°')
-                Blank()
-                  .height(40)
-                Text(item.tempLow+'°')
-                Image('picture/white/'+item.nightImg.toString()+'@1x.png')
-                  .width(20)
-                Text(item.text_night)
-                Text(item.windSpeed)
-                Text(item.quality)
-              }
-              .width('20%')
-              .height('90%')
-              .justifyContent(FlexAlign.SpaceAround)
-            }
-          })
+    Row(){
+      Column() {
+        Row(){
+          BackComponent()
         }
-        .listDirection(Axis.Horizontal)
+        .height('8%')
+        .width('90%')
+        .justifyContent(FlexAlign.Start)
+        Row(){
+          Text(this.title)
+            .fontSize(28)
+        }
+        .height('12%')
+        .width('90%')
+        .justifyContent(FlexAlign.Start)
+        Row(){
+          List(){
+            ForEach(this.dailyDeyailViewModel_Array,(item:DailyDetailViewModel)=>{
+              ListItem(){
+                Column(){
+                  Text(item.week.slice(5))
+                  Image('picture/black/'+item.dayImg.toString()+'@1x.png')
+                    .width(20)
+                  Text(item.text_day)
+                  Text(item.tempHigh+'°')
+                  Blank()
+                    .height(40)
+                  Text(item.tempLow+'°')
+                  Image('picture/black/'+item.nightImg.toString()+'@1x.png')
+                    .width(20)
+                  Text(item.text_night)
+                  Text(item.windSpeed+'km/h')
+
+                  Text('aqi='+item.quality)
+                    .borderRadius(5)
+                }
+                .width('20%')
+                .height('90%')
+                .justifyContent(FlexAlign.SpaceAround)
+              }
+            })
+          }
+          .listDirection(Axis.Horizontal)
+        }
+        .height('80%')
+        .width('100%')
+        .justifyContent(FlexAlign.SpaceAround)
+        .alignItems(VerticalAlign.Center)
+
       }
-      .height('80%')
+      .height('85%')
       .width('100%')
-      .justifyContent(FlexAlign.SpaceAround)
-      .alignItems(VerticalAlign.Center)
-      .backgroundColor(Color.Green)
+      .justifyContent(FlexAlign.Start)
     }
-    .height('85%')
+    .height('100%')
     .width('100%')
-    .justifyContent(FlexAlign.Start)
+    .backgroundColor('#5ef6f5f0')
+
   }
 }

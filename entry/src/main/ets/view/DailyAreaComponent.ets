@@ -13,7 +13,7 @@ import { HttpGetDailyWeather } from '../util/HttpGetDailyWeather'
 import { hilog } from '@kit.PerformanceAnalysisKit'
 
 import { ButtonOptions, router } from '@kit.ArkUI';
-
+import CommonConstants from '../common/CommonConstants';
 @Component
 export struct DailyAreaComponent{//
   @Prop city:string;
@@ -41,23 +41,39 @@ export struct DailyAreaComponent{//
         Column(){
           ForEach(this.dailyViewModel_Array,(item:DailyViewModel,index:number)=>{
             Row(){
-              Text(item.week.slice(5))
-                .fontColor(Color.White)
-                .margin($r('app.float.small_space_size'))
+              if(index==0){
+                Text('今天')
+                  // .fontColor(Color.White)
+                  .margin({left:5,top:5,bottom:5})
+              }
+              else if(index==1){
+                Text('明天')
+                  // .fontColor(Color.White)
+                  .margin($r('app.float.small_space_size'))
+                  .margin({left:5,top:5,bottom:5})
+              }
+              else{
+                Text(item.week.slice(5))
+                  // .fontColor(Color.White)
+                  .margin($r('app.float.small_space_size'))
+                  .margin({left:5,top:5,bottom:5})
+              }
               Text(item.weather)
-                .fontColor(Color.White)
-                .margin($r('app.float.small_space_size'))
-              Image('picture/white/'+item.Img+'@1x.png')
+                // .fontColor(Color.White)
+                .margin({left:5,top:5,bottom:5})
+              Image('picture/black/'+item.Img+'@1x.png')
                 .width(20)
+                .margin({left:20,top:5,bottom:5})
               Text(item.tempHigh+'°')
-                .fontColor(Color.White)
-                .margin($r('app.float.small_space_size'))
+                // .fontColor(Color.White)
+                .margin({left:15,top:5,bottom:5})
               Text(item.tempLow+'°')
-                .fontColor(Color.White)
-                .margin($r('app.float.small_space_size'))
+                // .fontColor(Color.White)
+                .margin({right:5,top:5,bottom:5})
             }
+            .width('100%')
             .height('30%')
-            .alignItems(VerticalAlign.Center)
+            .justifyContent(FlexAlign.SpaceBetween)
             if(index<2){
               Divider()
             }
@@ -69,7 +85,7 @@ export struct DailyAreaComponent{//
       Row(){
         Button('查看近15日天气',{type:ButtonType.Normal})
           .fontColor(Color.White)
-          .width(320)
+          .width(290)
           .height(40)
           .borderRadius(15)
           // .opacity(2)
@@ -87,7 +103,7 @@ export struct DailyAreaComponent{//
     .height(160)
     .width('90%')
     .borderRadius(15)
-    .backgroundColor(Color.Gray)
+    .backgroundColor(CommonConstants.BACKGROUND)
     // .opacity(0.5)
     .margin({bottom:10,left:18,right:18})
   }

@@ -14,6 +14,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit'
 
 import { ButtonOptions, router } from '@kit.ArkUI';
 
+import CommonConstants from '../common/CommonConstants';
 @Component
 export struct LiveIndexComponent{//
   @Prop city:string;
@@ -37,19 +38,19 @@ export struct LiveIndexComponent{//
 
   build() {
     Grid() {
-      GridItem(){Text(this.liveCardsViewModel.dress.brief).fontColor(Color.White)}
-      GridItem(){Text(this.liveCardsViewModel.uv.brief).fontColor(Color.White)}
-      GridItem(){Text('户外运动'+this.liveCardsViewModel.sport.brief).fontColor(Color.White)}
-      GridItem(){Text(this.liveCardsViewModel.car_washing.brief+'洗车').fontColor(Color.White)}
-      GridItem(){Text(this.liveCardsViewModel.umbrella.brief).fontColor(Color.White)}
-      GridItem(){Text(this.liveCardsViewModel.flu.brief+'感冒').fontColor(Color.White)}
+      GridItem(){Text(this.liveCardsViewModel.dress.brief)}
+      GridItem(){Text('紫外线'+this.liveCardsViewModel.uv.brief)}
+      GridItem(){Text('户外运动'+this.liveCardsViewModel.sport.brief)}
+      GridItem(){Text(this.liveCardsViewModel.car_washing.brief+'洗车')}
+      GridItem(){Text(this.liveCardsViewModel.umbrella.brief)}
+      GridItem(){Text(this.liveCardsViewModel.flu.brief+'感冒')}
     }
     .rowsTemplate('1fr 1fr')
     .columnsTemplate('1fr 1fr 1fr')
     .height(160)
-    .width('90%')
+    .width('92%')
     .borderRadius(15)
-    .backgroundColor(Color.Gray)
+    .backgroundColor(CommonConstants.BACKGROUND)
     // .opacity(0.5)
     .margin({bottom:10,left:18,right:18})
   }

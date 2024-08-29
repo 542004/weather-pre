@@ -1,11 +1,10 @@
 export class WeatherCardsViewModel{
-  public uv:string=''
+  public clouds:string=''
   public humidity:string=''//
   public feels_like:string=''//
   public wind_direction:string=''//
   public wind_speed:string=''//
-  public sunrise:string=''
-  public sunset:string=''
+  public visibility:string=''
   public pressure:string=''//
 }
 

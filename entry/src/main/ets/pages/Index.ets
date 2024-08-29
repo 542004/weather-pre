@@ -56,7 +56,7 @@ struct Index {
   // @State nowWeatherModel:NowWeatherResult=new NowWeatherResult()
   // @State simpleModel:SimpleResults=new SimpleResults()
   //city
-  @State cities:string[]=[]
+  @State cities:string[]=['深圳']
   @State listHeight: number = 360;
   private yStart: number = 0;
   aboutToAppear() {
@@ -106,29 +106,22 @@ struct Index {
                 DailyAreaComponent({city:city})
               }
 
-              //每小时信息
+              //每小时信息 降雨预报
               ListItem(){
                 HourlyAreaComponent({city:city})
-                // .backgroundColor((Color.Red))
               }
 
-              //降雨预报
-              ListItem(){
-
-              }
               //六张卡片
               ListItem(){
                 WeatherCardsComponent({city:city})
               }
-              // .backgroundColor(Color.Green)
               //六张卡片
               ListItem(){
                 LiveIndexComponent({city:city})
               }
-              // .backgroundColor(Color.Yellow)
 
             }
-            .backgroundColor('#B0E0E6')
+            .backgroundColor('#ff7ca7f5')
             .height(this.listHeight)
             .alignRules(CommonConstants.LIST_ALIGN_RULES)
             .scrollBar(BarState.Off)
@@ -148,19 +141,31 @@ struct Index {
           }
           else if(event.type===TouchType.Up){
             const yEnd=event.touches[0].y;
-            if(yEnd<this.yStart) this.listHeight=720;
-            else if(yEnd>this.yStart) this.listHeight=Math.max(360,this.listHeight-yEnd+this.yStart);
+            if(yEnd<this.yStart) {
+              this.listHeight=720;
+              // CommonConstants.BACKGROUND=Color.White
+            }
+            else if(yEnd>this.yStart){
+              this.listHeight=Math.max(360,this.listHeight-yEnd+this.yStart);
+              // CommonConstants.BACKGROUND=Color.Gray
+            }
           }
           else if(event.type===TouchType.Move){
             const yEnd=event.touches[0].y;
-            if(yEnd<this.yStart) this.listHeight=Math.min(720,this.listHeight+this.yStart-yEnd);
-            else if(yEnd>this.yStart) this.listHeight=Math.max(360,this.listHeight-yEnd+this.yStart);
+            if(yEnd<this.yStart){
+              this.listHeight=Math.min(720,this.listHeight+this.yStart-yEnd);
+              // CommonConstants.BACKGROUND=Color.White
+            }
+            else if(yEnd>this.yStart){
+              this.listHeight=Math.max(360,this.listHeight-yEnd+this.yStart);
+              // CommonConstants.BACKGROUND=Color.Gray
+            }
           }
         })
         // .backgroundColor('#33cccc')
       })
     }
-    .backgroundColor('#B0E0E6')
+    .backgroundColor('#d26095f3')
     .height('100%')
     .width('100%')
     .loop(false)

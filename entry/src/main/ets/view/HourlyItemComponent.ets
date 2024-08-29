@@ -9,7 +9,7 @@ export struct HourlyItemComponent{
       Blank()
         .height('10%')
       Text(this.hourlyViewModel.temp+'°')
-      Image('/picture/white/'+this.hourlyViewModel.Img.toString()+'@1x.png')
+      Image('/picture/black/'+this.hourlyViewModel.Img.toString()+'@1x.png')
         .width(20)
       Text(this.hourlyViewModel.windSpeed+'km/h')
         .fontSize(12)
@@ -19,7 +19,7 @@ export struct HourlyItemComponent{
     }
     .width('14%')
     .height('90%')
-    .backgroundColor(Color.Green)
+    // .backgroundColor(Color.Green)
     .justifyContent(FlexAlign.SpaceBetween)
   }
 

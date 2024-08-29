@@ -5,7 +5,7 @@ import {DailyViewModel} from '../viewmodel/DailyViewModel'
 import {HourlyViewModel} from '../viewmodel/HourlyViewModel'
 import {LiveCardsViewModel} from '../viewmodel/LiveCardsViewModel'
 import {NowViewModel} from '../viewmodel/NowViewModel'
-import {WarningViewModel} from '../viewmodel/WarningViewModel'
+import {WarningViewModel,WarningViewModelItem} from '../viewmodel/WarningViewModel'
 import {WeatherCardsViewModel} from '../viewmodel/WeatherCardsViewModel'
 import {CityWeatherViewModel} from '../viewmodel/CityWeathersViewModel'
 
@@ -56,15 +56,34 @@ struct Index {
       .height('5%')
       .width('90%')
       .justifyContent(FlexAlign.Start)
-
-      Row(){
-        Text(this.warningViewModel.WarningViewModelItemArray[0].description)
+      //显示警告
+      List(){
+        ForEach(this.warningViewModel.WarningViewModelItemArray,(item:WarningViewModelItem)=>{
+          ListItem(){
+            Column(){
+              Row(){
+                Text(item.title).align(Alignment.TopStart).fontWeight(FontWeight.Bold)
+              }
+              .margin(5)
+              Row(){
+                Text(item.pub_date).align(Alignment.TopStart).fontWeight(FontWeight.Lighter)
+              }
+              .margin(5)
+              Row(){
+                Text(item.description)
+              }
+              .margin(5)
+              .margin({bottom:20})
+            }
+          }
+        })
       }
       .height('90%')
       .width('90%')
       .margin(20)
-      .justifyContent(FlexAlign.Start)
-      .alignItems(VerticalAlign.Top)
+      .scrollBar(BarState.Off)
+      // .justifyContent(FlexAlign.Start)
+      // .alignItems(VerticalAlign.Top)
     }
     .height('100%')
     .width('100%')

@@ -9,7 +9,7 @@ import {DailyWeatherResults,DailyWeatherResult} from '../bean/dailyWeather/Resul
 import {weatherDataHelper} from '../dal/WeatherDataHelper'
 
 import { hilog } from '@kit.PerformanceAnalysisKit'
-
+import CommonConstants from '../common/CommonConstants';
 @Component
 export
 struct WeatherCardsComponent{
@@ -43,41 +43,58 @@ struct WeatherCardsComponent{
 
   build() {
     Grid(){
-      GridItem(){Text(this.weatherCardsViewModel.uv)}
-      .height(65)
-      .width('90%')
-      .borderRadius(15)
-      .backgroundColor(Color.Gray)
+      GridItem(){
+        Column(){
+          Text('云量')
+          Text(this.weatherCardsViewModel.clouds+'%')
+        }
+      }
+      .MyStyles()
       .margin({bottom:5,left:18,right:9})
-      GridItem(){Text(this.weatherCardsViewModel.humidity)}
-      .height(65)
-      .width('90%')
-      .borderRadius(15)
-      .backgroundColor(Color.Gray)
+
+      GridItem(){
+        Column(){
+          Text('湿度')
+          Text(this.weatherCardsViewModel.humidity+'%')
+        }
+      }
+      .MyStyles()
       .margin({bottom:5,left:9,right:18})
-      GridItem(){Text(this.weatherCardsViewModel.feels_like)}
-      .height(65)
-      .width('90%')
-      .borderRadius(15)
-      .backgroundColor(Color.Gray)
+
+      GridItem(){
+        Column(){
+          Text('体感')
+          Text(this.weatherCardsViewModel.feels_like+'°')
+        }
+      }
+      .MyStyles()
       .margin({bottom:5,left:18,right:9})
-      GridItem(){Text(this.weatherCardsViewModel.wind_direction+'  '+this.weatherCardsViewModel.wind_speed)}
-      .height(65)
-      .width('90%')
-      .borderRadius(15)
-      .backgroundColor(Color.Gray)
+
+      GridItem(){
+        Column(){
+          Text(this.weatherCardsViewModel.wind_direction+'风')
+          Text(this.weatherCardsViewModel.wind_speed)
+        }
+      }
+      .MyStyles()
       .margin({bottom:5,left:9,right:18})
-      GridItem(){Text(this.weatherCardsViewModel.sunrise+'  '+this.weatherCardsViewModel.sunset)}
-      .height(65)
-      .width('90%')
-      .borderRadius(15)
-      .backgroundColor(Color.Gray)
+
+      GridItem(){
+        Column(){
+          Text('能见度')
+          Text(this.weatherCardsViewModel.visibility+'km')
+        }
+      }
+      .MyStyles()
       .margin({bottom:5,left:18,right:9})
-      GridItem(){Text(this.weatherCardsViewModel.pressure)}
-      .height(65)
-      .width('90%')
-      .borderRadius(15)
-      .backgroundColor(Color.Gray)
+
+      GridItem(){
+        Column(){
+          Text('气压')
+          Text(this.weatherCardsViewModel.pressure)
+        }
+      }
+      .MyStyles()
       .margin({bottom:5,left:9,right:18})
     }
     .rowsTemplate('1fr 1fr 1fr')
@@ -88,5 +105,10 @@ struct WeatherCardsComponent{
     // .backgroundColor(Color.Gray)
     // .margin({bottom:10,left:18,right:18})
   }
-
+  @Styles MyStyles(){
+    .height(65)
+    .width('90%')
+    .borderRadius(15)
+    .backgroundColor(CommonConstants.BACKGROUND)
+  }
 }

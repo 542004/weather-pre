@@ -68,7 +68,7 @@ class WeatherDataHelper{
     let ans:HourlyViewModel[]=[]
     for(let i=0;i<model.hourly.length;i++){
       ans.push(
-        new HourlyViewModel(model.hourly[i].time,model.hourly[i].code,
+        new HourlyViewModel(model.hourly[i].time,model.hourly[i].text,model.hourly[i].code,
           model.hourly[i].temperature, model.hourly[i].wind_speed)
       )
     }
@@ -107,9 +107,12 @@ class WeatherDataHelper{
     let ans:WeatherCardsViewModel=new WeatherCardsViewModel();
     ans.pressure=model.now.pressure
     ans.feels_like=model.now.feels_like
+    ans.humidity=model.now.humidity
     ans.wind_direction=model.now.wind_direction
     ans.wind_speed=model.now.wind_speed
     ans.pressure=model.now.pressure
+    ans.clouds=model.now.clouds
+    ans.visibility=model.now.visibility
     return ans;
   }
   //LiveIndex
