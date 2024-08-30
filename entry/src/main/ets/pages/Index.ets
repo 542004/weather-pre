@@ -37,6 +37,8 @@ import { DailyAreaComponent } from '../view/DailyAreaComponent'
 import { router } from '@kit.ArkUI'
 import {HttpGetCurrentCity} from '../util/HttpGetCurrentCity'
 import CommonConstants from '../common/CommonConstants';
+import { preferences } from '@kit.ArkData';
+import {common } from '@kit.AbilityKit';
 /**
  * fixdaily分支
  */
@@ -56,19 +58,46 @@ struct Index {
   // @State nowWeatherModel:NowWeatherResult=new NowWeatherResult()
   // @State simpleModel:SimpleResults=new SimpleResults()
   //city
-  @State cities:string[]=['深圳']
-  @State listHeight: number = 360;
-  private yStart: number = 0;
-  aboutToAppear() {
-    let httpGetCurrentCity:HttpGetCurrentCity=new HttpGetCurrentCity()
-    httpGetCurrentCity.getHttp('').then((res:SimpleResults)=>{
-      this.cities.push(res.city)
-    })
-      .catch(()=>{
-        console.info('获取当前位置失败')
-      })
 
+  @State cities:string[]=[]
+  @State listHeight: number = 360;
+  @State curCity:string=''
+  private yStart: number = 0;
+
+  context = getContext(this) as common.UIAbilityContext//获取上下文
+  dataPreferences:preferences.Preferences = preferences.getPreferencesSync(this.context, {name:'myCity'});//获取实例
+
+
+  aboutToAppear() {
+    //赋值
+    CommonConstants.CITIES=this.dataPreferences.getSync('cities',[]) as string[]
+    //获取当前位置
+    // let httpGetCurrentCity:HttpGetCurrentCity=new HttpGetCurrentCity()
+    // httpGetCurrentCity.getHttp('').then((res:SimpleResults)=>{
+    //   this.curCity=res.city
+    //   console.info('首页测试 aboutToAppear的.then完成 '+this.curCity)
+    // })
+    //   .catch(()=>{
+    //     console.info('获取当前位置失败')
+    //   })
+    console.info('首页测试 aboutToAppear完成 '+this.curCity)
   }
+  onPageShow(): void {
+    //更新城市
+    this.curCity=CommonConstants.CURRENT_CITY
+    this.cities=[CommonConstants.CURRENT_CITY];
+    for(let i=0;i<CommonConstants.CITIES.length;i++){
+      this.cities.push(CommonConstants.CITIES[i])
+    }
+    console.info('首页测试：'+JSON.stringify(this.cities)+' 和 '+this.curCity)//
+  }
+  aboutToDisappear(): void {
+    //更新首选项
+    console.info('首页aboutToDisappear测试：'+JSON.stringify(CommonConstants.CITIES))//
+    this.dataPreferences.putSync('cities',CommonConstants.CITIES)
+    this.dataPreferences.flush()//
+  }
+  // a[10][10]
   build() {
     Swiper(){
       ForEach(this.cities,(city:string)=>{

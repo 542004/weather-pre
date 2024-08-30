@@ -1,5 +1,5 @@
 import { router } from '@kit.ArkUI';
-
+import CommonConstants from '../common/CommonConstants';
 @Entry
 @Component
 struct SearchPage {
@@ -43,7 +43,14 @@ struct SearchPage {
 
 
       Row(){
-
+        Button('北京')
+          .onClick(()=>{
+            CommonConstants.CITIES.push('北京')
+          })
+        Button('南昌')
+          .onClick(()=>{
+            CommonConstants.CITIES.push('南昌')
+          })
       }
       .height('55%')
     }

@@ -1,10 +1,21 @@
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
-
+import {HttpGetCurrentCity} from '../util/HttpGetCurrentCity'
+import CommonConstants from '../common/CommonConstants';
+import {SimpleResults} from '../bean/simpleData/Results'
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    //获取当前位置
+    let httpGetCurrentCity:HttpGetCurrentCity=new HttpGetCurrentCity()
+    httpGetCurrentCity.getHttp('').then((res:SimpleResults)=>{
+      CommonConstants.CURRENT_CITY=res.city
+      console.info('首页测试 ability .then完成 '+CommonConstants.CURRENT_CITY)
+    })
+      .catch(()=>{
+        console.info('获取当前位置失败')
+      })
   }
 
   onDestroy(): void {

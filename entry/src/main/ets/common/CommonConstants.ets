@@ -17,6 +17,10 @@ export default  class CommonConstants{
   static readonly CURRENT_CITY_URL:string='https://api.vvhan.com/api/weather'
 
   static BACKGROUND:string='#eef6f5f0'
+
+  static CITIES:string[]=[];
+
+  static CURRENT_CITY:string=''
   //
   static  HAVE_WARNING:boolean=false;
   static readonly LIST_ALIGN_RULES: AlignRuleOption = {

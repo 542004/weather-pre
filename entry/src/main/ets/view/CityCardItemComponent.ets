@@ -10,7 +10,7 @@ import {DailyWeatherResults,DailyWeatherResult} from '../bean/dailyWeather/Resul
 import {weatherDataHelper} from '../dal/WeatherDataHelper'
 
 import { hilog } from '@kit.PerformanceAnalysisKit'
-
+import CommonConstants from '../common//CommonConstants'
 
 @Component
 export struct CityCardItemComponent{
@@ -78,7 +78,8 @@ export struct CityCardItemComponent{
     }
     .height('12.5%')
     .width('100%')
-    .backgroundColor(Color.Brown)
+    .backgroundColor('#d26095f3')
+    .borderRadius(12)
     .justifyContent(FlexAlign.SpaceBetween)
     .onClick(()=>{
 

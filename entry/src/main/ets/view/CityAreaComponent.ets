@@ -12,9 +12,10 @@ export struct CityAreaComponent{
        .height($r('app.float.common_pic_size'))
        .width($r('app.float.common_pic_size'))
        .onClick(()=>{
+         console.info('测试 '+this.cities[0])
           router.pushUrl({
             url:'pages/CityMangerPage',
-            params: this.cities
+            params: this.cities[0]
           })
             .then(()=>{
               console.info('跳转城市管理页面成功')
