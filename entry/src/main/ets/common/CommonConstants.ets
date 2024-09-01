@@ -15,6 +15,9 @@ export default  class CommonConstants{
   static readonly LIVE_INDEX_URL:string='https://api.seniverse.com/v3/life/suggestion.json?key=S402rOCSb6OqG5IVH&location='
   //自动识别
   static readonly CURRENT_CITY_URL:string='https://api.vvhan.com/api/weather'
+  //城市搜索
+  static readonly SEARCH_CITY:string='https://api.seniverse.com/v3/location/search.json?key=S402rOCSb6OqG5IVH&q='
+
 
   static BACKGROUND:string='#eef6f5f0'
 

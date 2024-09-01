@@ -9,6 +9,7 @@ import {NowViewModel} from '../viewmodel/NowViewModel'
 import {WarningViewModel} from '../viewmodel/WarningViewModel'
 import {LiveCardsViewModel} from '../viewmodel/LiveCardsViewModel'
 import {WeatherCardsViewModel} from '../viewmodel/WeatherCardsViewModel'
+import {SearchCityViewModel} from '../viewmodel/SearchCityViewModel'
 /**
  * bean的导入
  */
@@ -19,7 +20,7 @@ import {HourlyWeatherResult,HourlyWeatherResults} from '../bean/hourlyWeather/Re
 import {DailyWeatherResult,DailyWeatherResults,DailyItem} from '../bean/dailyWeather/Results'
 import {SimpleResults} from '../bean/simpleData/Results'
 import {LiveIndexResults,LiveIndexResult} from '../bean/liveIndex/Results'
-
+import {searchCityResult,searchCityResults} from '../bean/searchCity/Results'
 
 class WeatherDataHelper{
   //AqiViewModel
@@ -131,6 +132,17 @@ class WeatherDataHelper{
     ans.flu.brief=model.suggestion[0].flu.brief
     ans.flu.details=model.suggestion[0].flu.details
     ans.sport
+    return ans;
+  }
+  //搜索城市
+  public getSearchCity(model:searchCityResults):SearchCityViewModel[]{
+    let ans:SearchCityViewModel[]=[];
+    for(let i=0;i<model.results.length;i++){
+      let temp:SearchCityViewModel=new SearchCityViewModel();
+      temp.name=model.results[i].name
+      temp.path=model.results[i].path
+      ans.push(temp);
+    }
     return ans;
   }
 }

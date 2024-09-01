@@ -55,10 +55,17 @@ struct CityMangerPage {
       RelativeContainer(){
         List({space:10}){
           ForEach(this.cities,(city:string,index:number)=>{
-            ListItem(){
-              CityCardItemComponent({city:city})
+            if(index>0){
+              ListItem(){
+                CityCardItemComponent({city:city})
+              }
+              .swipeAction({end:this.DeleteButton(index)})
             }
-            .swipeAction({end:this.DeleteButton(index)})
+            else{
+              ListItem(){
+                CityCardItemComponent({city:city})
+              }
+            }
           })
         }
         .alignListItem(ListItemAlign.Start)

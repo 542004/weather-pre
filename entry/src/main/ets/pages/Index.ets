@@ -83,6 +83,8 @@ struct Index {
     console.info('首页测试 aboutToAppear完成 '+this.curCity)
   }
   onPageShow(): void {
+    this.dataPreferences.putSync('cities',CommonConstants.CITIES)
+    this.dataPreferences.flush()//
     //更新城市
     this.curCity=CommonConstants.CURRENT_CITY
     this.cities=[CommonConstants.CURRENT_CITY];
@@ -91,9 +93,12 @@ struct Index {
     }
     console.info('首页测试：'+JSON.stringify(this.cities)+' 和 '+this.curCity)//
   }
+  onPageHide(): void {
+    console.info('首页onPageHide测试：'+JSON.stringify(CommonConstants.CITIES))//
+  }
   aboutToDisappear(): void {
     //更新首选项
-    console.info('首页aboutToDisappear测试：'+JSON.stringify(CommonConstants.CITIES))//
+    // console.info('首页aboutToDisappear测试：'+JSON.stringify(CommonConstants.CITIES))//
     this.dataPreferences.putSync('cities',CommonConstants.CITIES)
     this.dataPreferences.flush()//
   }
