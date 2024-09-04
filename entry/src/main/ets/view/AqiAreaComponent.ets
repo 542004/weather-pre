@@ -53,11 +53,11 @@ export struct AqiAreaComponent{
       }
       .width('40%')
       .backgroundColor('#fff8f5ff')
-      .onClick(()=>{//跳转到详情页面
-        router.pushUrl({
-          url:'pages/AqiPage'
-        })
-      })
+      // .onClick(()=>{//跳转到详情页面
+        // router.pushUrl({
+        //   url:'pages/AqiPage'
+        // })
+      // })
     }
     .height('90%')
     .width('90%')

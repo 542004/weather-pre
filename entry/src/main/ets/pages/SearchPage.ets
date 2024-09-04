@@ -45,9 +45,18 @@ struct SearchPage {
        .justifyContent(FlexAlign.Start)
 
        Row(){
-
+         Image($r('app.media.location'))
+           .width(20)
+           .height(20)
+          Text(CommonConstants.CURRENT_CITY)
+            .fontColor(Color.Blue)
+            .fontSize(24)
        }
        .height('10%')
+       .width('90%')
+       .justifyContent(FlexAlign.Center)
+       .backgroundColor(CommonConstants.BACKGROUND)
+       .borderRadius(15);
 
        Row(){
          Text('热门城市')
@@ -56,14 +65,36 @@ struct SearchPage {
        .justifyContent(FlexAlign.Start)
 
        Row(){
-         Button('北京')
-           .onClick(()=>{
-             CommonConstants.CITIES.push('北京')
+         Grid(){
+           ForEach(CommonConstants.POPULAR_CITY,(item:string)=>{
+             if(CommonConstants.CITIES.indexOf(item)===-1&&item!='西安'){
+               GridItem(){
+                 Button(item)
+                   .onClick(()=>{
+                     CommonConstants.CITIES.push(item)
+                   })
+                   .fontColor(Color.Black)
+                   .backgroundColor(CommonConstants.BACKGROUND)
+               }
+               .borderRadius(8)
+               .backgroundColor(CommonConstants.BACKGROUND)
+             }
+             else{
+               GridItem(){
+                 Button(item)
+                   .fontColor(Color.Black)
+                   .backgroundColor(Color.Blue)
+               }
+               .borderRadius(8)
+               .backgroundColor(Color.Blue)
+             }
            })
-         Button('南昌')
-           .onClick(()=>{
-             CommonConstants.CITIES.push('南昌')
-           })
+         }
+         .columnsTemplate('1fr 1fr 1fr')
+         .rowsTemplate('1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr')
+         .columnsGap(10)
+         .rowsGap(10)
+
        }
        .height('55%')
      }

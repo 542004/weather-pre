@@ -21,9 +21,9 @@ export default  class CommonConstants{
 
   static BACKGROUND:string='#eef6f5f0'
 
-  static CITIES:string[]=[];
+  static CITIES:string[]=[''];
 
-  static CURRENT_CITY:string=''
+  static CURRENT_CITY:string='西安'
   //
   static  HAVE_WARNING:boolean=false;
   static readonly LIST_ALIGN_RULES: AlignRuleOption = {
@@ -31,4 +31,6 @@ export default  class CommonConstants{
     'left': { 'anchor': '__container__', 'align': HorizontalAlign.Start },
     'right': { 'anchor': '__container__', 'align': HorizontalAlign.End }
   };
+
+  static POPULAR_CITY:string[]=['北京','上海','广州','深圳','珠海','佛山','南京','苏州','厦门','南宁','昆明','成都','长沙','福州','杭州','武汉','青岛','西安','太原','石家庄','沈阳','重庆','天津']
 }

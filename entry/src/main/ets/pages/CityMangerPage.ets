@@ -10,7 +10,7 @@ struct CityMangerPage {
   onPageShow(): void {
     this.curCity=router.getParams() as string
     // this.cities=[this.curCity];
-    this.cities=[CommonConstants.CURRENT_CITY];//用CommonConstants.CURRENT_CIT可以，传参就不行
+    this.cities=['西安'];//用CommonConstants.CURRENT_CIT可以，传参就不行
     for(let i=0;i<CommonConstants.CITIES.length;i++){
       this.cities.push(CommonConstants.CITIES[i])
     }

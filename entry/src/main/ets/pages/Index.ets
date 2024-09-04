@@ -59,7 +59,7 @@ struct Index {
   // @State simpleModel:SimpleResults=new SimpleResults()
   //city
 
-  @State cities:string[]=[]
+  @State cities:string[]=['西安']
   @State listHeight: number = 360;
   @State curCity:string=''
   private yStart: number = 0;
@@ -83,15 +83,16 @@ struct Index {
     console.info('首页测试 aboutToAppear完成 '+this.curCity)
   }
   onPageShow(): void {
-    this.dataPreferences.putSync('cities',CommonConstants.CITIES)
-    this.dataPreferences.flush()//
+    // this.dataPreferences.putSync('cities',CommonConstants.CITIES)
+    // this.dataPreferences.flush()//
+    this.cities=['西安']
     //更新城市
     this.curCity=CommonConstants.CURRENT_CITY
-    this.cities=[CommonConstants.CURRENT_CITY];
+    // this.cities=[CommonConstants.CURRENT_CITY];
     for(let i=0;i<CommonConstants.CITIES.length;i++){
       this.cities.push(CommonConstants.CITIES[i])
     }
-    console.info('首页测试：'+JSON.stringify(this.cities)+' 和 '+this.curCity)//
+    console.info('首页测试：'+JSON.stringify(this.cities)+'   '+JSON.stringify(CommonConstants.CITIES)+' 和 '+this.curCity)//
   }
   onPageHide(): void {
     console.info('首页onPageHide测试：'+JSON.stringify(CommonConstants.CITIES))//
@@ -99,6 +100,7 @@ struct Index {
   aboutToDisappear(): void {
     //更新首选项
     // console.info('首页aboutToDisappear测试：'+JSON.stringify(CommonConstants.CITIES))//
+
     this.dataPreferences.putSync('cities',CommonConstants.CITIES)
     this.dataPreferences.flush()//
   }
