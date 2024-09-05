@@ -43,9 +43,10 @@ export struct SearchCItyComponent{//
           ListItem(){
             Row(){
               Text(item.name+' - '+item.path.slice(item.name.length+1)).textAlign(TextAlign.Center).fontSize($r('app.float.medium_font_size'))
-              if(CommonConstants.CITIES.indexOf(item.name)===-1&&item.name!='西安'){
+              if(CommonConstants.CITIES.indexOf(item.name)<0&&item.name!='西安'){
                 Image('picture/add.png').width(12).height(12)
                   .onClick(()=>{
+                    if(CommonConstants.CITIES.indexOf(item.name)<0&&item.name!='西安')
                     CommonConstants.CITIES.push(item.name)
                     this.refresh=-1*this.refresh
                   })

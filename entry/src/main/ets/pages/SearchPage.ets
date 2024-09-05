@@ -5,9 +5,11 @@ import {SearchCItyComponent} from '../view/SearchCityComponent'
 @Entry
 @Component
 struct SearchPage {
+
   @State city:string=''
+  @State mySpace:number=0.001;
   build() {
-    Column({space:5}){
+    Column({space:5+this.mySpace}){
       //搜索部分
       Row(){
         Column(){
@@ -71,7 +73,10 @@ struct SearchPage {
                GridItem(){
                  Button(item)
                    .onClick(()=>{
-                     CommonConstants.CITIES.push(item)
+                     if(CommonConstants.CITIES.indexOf(item)===-1&&item!='西安'){
+                       CommonConstants.CITIES.push(item)
+                       this.mySpace*=-1;
+                     }
                    })
                    .fontColor(Color.Black)
                    .backgroundColor(CommonConstants.BACKGROUND)
@@ -83,10 +88,10 @@ struct SearchPage {
                GridItem(){
                  Button(item)
                    .fontColor(Color.Black)
-                   .backgroundColor(Color.Blue)
+                   .backgroundColor('#ff7ca7f5')
                }
                .borderRadius(8)
-               .backgroundColor(Color.Blue)
+               .backgroundColor('#ff7ca7f5')
              }
            })
          }
